@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat
 
 class login : AppCompatActivity() {
     lateinit var btnLogin: Button
+    lateinit var btnContraseña: Button
+    lateinit var btnCrearCuenta: Button
     lateinit var btnVolver: ImageButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,10 +20,24 @@ class login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         btnLogin = findViewById(R.id.btnIngresarLogin)
+        btnContraseña = findViewById(R.id.btnOlvideContrasena)
+        btnCrearCuenta = findViewById(R.id.btnCrearcuenta)
         btnVolver = findViewById(R.id.btnVolverAIncio)
 
         btnLogin.setOnClickListener {
             val intent = Intent(this, tutorList::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btnContraseña.setOnClickListener {
+            val intent = Intent(this, cambioContrasena::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btnCrearCuenta.setOnClickListener {
+            val intent = Intent(this, registro::class.java)
             startActivity(intent)
             finish()
         }

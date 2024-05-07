@@ -12,7 +12,7 @@
         android:id="@+id/btnVolverCambioExito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
+        android:layout_marginEnd="116dp"
         android:background="@color/cardview_shadow_end_color"
         android:text="@string/inicio"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -20,9 +20,9 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717" />
+        app:layout_constraintVertical_bias="0.722" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -52,8 +52,8 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginBottom="244dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginBottom="248dp"
         android:text="@string/ve_al"
         android:textColor="#2E4369"
         android:textSize="30sp"

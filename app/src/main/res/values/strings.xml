@@ -21,4 +21,10 @@
     <string name="Logo">Logo</string>
     <string name="boton_de_volver">boton de volver</string>
     <string name="qu_eres">¿Qué eres?</string>
+    <string name="cambiar_contrase_a">Cambiar Contraseña</string>
+    <string name="cambio_de_contrase_a">Cambio de contraseña</string>
+    <string name="nueva_contrase_a">Nueva Contraseña</string>
+    <string name="te_has_cambiado_tu_contrase_a_con_xito">Te has cambiado tu contraseña con éxito</string>
+    <string name="ve_al">Ve al</string>
+    <string name="inicio">Inicio</string>
 </resources>

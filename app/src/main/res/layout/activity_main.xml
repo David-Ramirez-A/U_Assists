@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/inicio"
+    tools:context=".inicio" >
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="342dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="284dp"
+        android:backgroundTint="#F36C4F"
+        android:text="@string/registrar"
+        android:textColor="#FFE9E3"
+        android:textSize="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpUsage,VisualLintButtonSize,VisualLintBounds,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="344dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="144dp"
+        android:backgroundTint="#3A8AC9"
+        android:text="@string/ingresar"
+        android:textColor="#D7FAFF"
+        android:textSize="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpUsage,VisualLintButtonSize,VisualLintBounds" />
+</androidx.constraintlayout.widget.ConstraintLayout>

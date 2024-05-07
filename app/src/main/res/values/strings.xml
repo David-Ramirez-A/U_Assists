@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">U Assists</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="registrar">Registrar</string>
+    <string name="constrase_a">Constraseña</string>
+    <string name="email">Email</string>
+    <string name="crear_una_cuenta">Crear una cuenta</string>
+    <string name="olvidaste_tu_contrase_a">Olvidaste tu contraseña</string>
+    <string name="no_tienes_cuenta">No tienes cuenta</string>
+    <string name="estudiante">Estudiante</string>
+    <string name="tutor">Tutor</string>
+    <string name="confirmar_contrase_a">Confirmar contraseña</string>
+    <string name="registrase">Registrase</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="te_has_registrado_con_exito">Te has registrado con exito</string>
+    <string name="iniciar_sesi_n">iniciar sesión</string>
+    <string name="ve_a">Ve a</string>
+    <string name="buscar">Buscar</string>
+    <string name="boton_de_buscar">Boton de buscar</string>
+    <string name="Logo">Logo</string>
+    <string name="boton_de_volver">boton de volver</string>
+    <string name="qu_eres">¿Qué eres?</string>
+</resources>

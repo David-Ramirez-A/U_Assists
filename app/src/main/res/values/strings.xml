@@ -27,5 +27,82 @@
         Carrera: Química\n
         Género: Masculino\n
         Dirección: Alajuela, Central, San Rafael
-</string>
+    </string>
+    <string name="profile_title">Completar Perfil</string>
+    <string name="finish_buttom">Terminar</string>
+    <string name="hint_phone">Telefono</string>
+    <string name="select">Seleccionado</string>
+    <string name="titulo_carrera">Carrera</string>
+    <string name="titulo_genero">Genero</string>
+    <string name="titulo_provincia">Provincia</string>
+    <string name="titulo_canton">Canton</string>
+    <string name="titulo_distrito">Distrito</string>
+    <string-array name="carreras">
+        <item>Ingeniería Civil</item>
+        <item>Psicología</item>
+        <item>Derecho</item>
+        <item>Administración de Empresas</item>
+        <item>Arquitectura</item>
+        <item>Ingeniería Informática</item>
+        <item>Enfermería</item>
+        <item>Economía</item>
+        <item>Biología</item>
+        <item>Contabilidad</item>
+        <item>Ciencias Políticas</item>
+        <item>Medicina</item>
+        <item>Veterinaria</item>
+    </string-array>
+
+    <string-array name="provincias">
+        <item>San José</item>
+        <item>Alajuela</item>
+        <item>Cartago</item>
+        <item>Heredia</item>
+        <item>Guanacaste</item>
+        <item>Puntarenas</item>
+        <item>Limón</item>
+    </string-array>
+
+    <string-array name="generos">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>No Binario</item>
+        <item>Prefiero no decir</item>
+    </string-array>
+
+    <string-array name="cantones">
+        <item>San José</item>
+        <item>Escazú</item>
+        <item>Desamparados</item>
+        <item>Puriscal</item>
+        <item>Aserrí</item>
+        <item>Mora</item>
+        <item>Goicoechea</item>
+        <item>Santa Ana</item>
+        <item>Alajuelita</item>
+        <item>Vázquez de Coronado</item>
+        <item>Acosta</item>
+        <item>Tibás</item>
+        <item>Moravia</item>
+        <item>Montes de Oca</item>
+        <item>Turrubares</item>
+        <item>Dota</item>
+        <item>Curridabat</item>
+        <item>Pérez Zeledón</item>
+        <item>León Cortés Castro</item>
+    </string-array>
+
+    <string-array name="distritos">
+        <item>Carmen</item>
+        <item>Mata Redonda</item>
+        <item>Hospital</item>
+        <item>Catedral</item>
+        <item>Zapote</item>
+        <item>San Francisco de Dos Ríos</item>
+        <item>Uruca</item>
+        <item>Mata Redonda</item>
+        <item>Pavas</item>
+        <item>Merced</item>
+        <item>Hatillo</item>
+    </string-array>
 </resources>

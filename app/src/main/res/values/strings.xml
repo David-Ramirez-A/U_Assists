@@ -21,4 +21,11 @@
     <string name="Logo">Logo</string>
     <string name="boton_de_volver">boton de volver</string>
     <string name="qu_eres">¿Qué eres?</string>
+    <string name="text_profile">Nombre: Anthony Rojas Fallas\n
+        Teléfono: 8354-9345\n
+        Email: arojas@gmail.com\n
+        Carrera: Química\n
+        Género: Masculino\n
+        Dirección: Alajuela, Central, San Rafael
+</string>
 </resources>

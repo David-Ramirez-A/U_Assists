@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/lines"
+android:orientation="vertical"
+android:padding="25dp"
+    tools:context=".teacher_selected">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="239dp"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="63dp"
+        android:layout_height="86dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/angle_left" />
+
+    <FrameLayout
+        android:layout_width="297dp"
+        android:layout_height="237dp"
+        android:layout_gravity="start">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="241dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_pic"
+            android:visibility="visible"
+            app:shapeAppearanceOverlay="@style/roundProfileImage" />
+
+        <FrameLayout
+            android:layout_width="103dp"
+            android:layout_height="105dp"
+            android:layout_gravity="right">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="105dp"
+                android:layout_height="103dp"
+                android:layout_gravity="right"
+                android:src="@drawable/star" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/quicksand_medium"
+                android:gravity="center_vertical"
+                android:text="4.5"
+                android:textColor="#E9F2F9"
+                android:textSize="32sp" />
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/shape"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="@string/text_profile"
+        android:textSize="20sp" />
+</LinearLayout>
+
+</LinearLayout>

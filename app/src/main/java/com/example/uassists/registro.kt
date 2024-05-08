@@ -19,7 +19,7 @@ class registro : AppCompatActivity()
         btnVolver = findViewById(R.id.btnVolverALogin)
 
         btnRegistrarUsuario.setOnClickListener {
-            val intent = Intent(this, registroExitoso::class.java)
+            val intent = Intent(this, FinishProfile::class.java)
             startActivity(intent)
             finish()
         }

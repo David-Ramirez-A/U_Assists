@@ -16,7 +16,7 @@ android:padding="25dp"
     android:orientation="horizontal">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnVolverListaT"
         android:layout_width="63dp"
         android:layout_height="86dp"
         android:backgroundTint="#00FFFFFF"

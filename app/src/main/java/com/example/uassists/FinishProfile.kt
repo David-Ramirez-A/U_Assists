@@ -34,7 +34,7 @@ class FinishProfile : AppCompatActivity() {
         }
 
         btnFinish.setOnClickListener {
-            val intent = Intent(this, tutorList::class.java)
+            val intent = Intent(this, registroExitoso::class.java)
             startActivity(intent)
             finish()
         }

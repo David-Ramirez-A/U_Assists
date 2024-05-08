@@ -26,7 +26,7 @@ class inicio : AppCompatActivity()
 
 
         btnRegistrar.setOnClickListener {
-            val intent = Intent(this, FinishProfile::class.java)
+            val intent = Intent(this, registro::class.java)
             startActivity(intent)
             finish()
         }

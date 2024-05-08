@@ -19,6 +19,9 @@
             android:name=".cambioContrasena"
             android:exported="false"/>
         <activity
+            android:name=".ProfileView"
+            android:exported="false" />
+        <activity
             android:name=".FinishProfile"
             android:exported="false" />
         <activity

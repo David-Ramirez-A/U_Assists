@@ -23,30 +23,31 @@
         tools:ignore="TextFields"
         android:autofillHints="" />
 
-    <ImageButton
-        android:id="@+id/btnVolverALogin2"
-        android:layout_width="79dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="116dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/go_back"
-        android:contentDescription="@string/boton_de_volver"
-        android:scaleType="centerInside"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck" />
-
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="258dp"
         android:layout_height="100dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
         android:contentDescription="@string/Logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
+
+    <ImageButton
+        android:id="@+id/btnVolverALogin2"
+        android:layout_width="79dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:adjustViewBounds="true"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/boton_de_volver"
+        android:scaleType="centerInside"
+        android:src="@drawable/angle_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/textView6"
@@ -96,7 +97,7 @@
         android:layout_width="325dp"
         android:layout_height="67dp"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="132dp"
         android:backgroundTint="#3A8AC9"
         android:text="@string/cambiar_contrase_a"
         android:textColor="#C5EEFC"

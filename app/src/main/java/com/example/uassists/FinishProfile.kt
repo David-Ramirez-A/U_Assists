@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,7 +16,7 @@ import android.widget.Toast
 
 
 class FinishProfile : AppCompatActivity() {
-    lateinit var btnBack: Button
+    lateinit var btnBack: ImageButton
     lateinit var btnFinish: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {

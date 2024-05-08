@@ -28,6 +28,13 @@
         Género: Masculino\n
         Dirección: Alajuela, Central, San Rafael
     </string>
+
+    <string name="text_bio">Nombre: Sophie Newman Vargas\n
+Teléfono: 6231-1032\n
+Email: snewman@gmail.com\n
+Carrera: Química\n
+Género: Femenino\n
+Dirección: Heredia, Belen, San Antonio</string>
     <string name="profile_title">Completar Perfil</string>
     <string name="finish_buttom">Terminar</string>
     <string name="hint_phone">Telefono</string>

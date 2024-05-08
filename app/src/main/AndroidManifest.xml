@@ -17,6 +17,12 @@
             android:exported="false" />
         <activity
             android:name=".cambioContrasena"
+            android:exported="false"/>
+        <activity
+            android:name=".FinishProfile"
+            android:exported="false" />
+        <activity
+            android:name=".teacher_selected"
             android:exported="false" />
         <activity
             android:name=".tutorList"

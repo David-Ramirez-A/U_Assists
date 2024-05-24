@@ -50,6 +50,7 @@ Dirección: Heredia, Belen, San Antonio</string>
     <string name="titulo_provincia">Provincia</string>
     <string name="titulo_canton">Canton</string>
     <string name="titulo_distrito">Distrito</string>
+    <string name="imagen_de_perfil">Imagen de perfil</string>
     <string-array name="carreras">
         <item>Ingeniería Civil</item>
         <item>Psicología</item>

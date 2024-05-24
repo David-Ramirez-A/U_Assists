@@ -1,5 +1,6 @@
 package com.example.uassists
 
+import Controler.UsarioControler
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -12,12 +13,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 
 
 class FinishProfile : AppCompatActivity() {
     lateinit var btnBack: ImageButton
     lateinit var btnFinish: Button
+    lateinit var txtTelefono :TextView
+
+    private val usuarioControler = UsarioControler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,20 +30,16 @@ class FinishProfile : AppCompatActivity() {
 
         btnBack = findViewById(R.id.btnBack)
         btnFinish = findViewById(R.id.btnFinish)
+        txtTelefono = findViewById(R.id.txtTelefono)
 
+        //Recibimiento de la informacion que estaba en la pantalla anterior
+        val nombre = intent.getStringExtra("nombre").toString()
+        val apellido = intent.getStringExtra("apellido").toString()
+        val email = intent.getStringExtra("email").toString()
+        val contraseña = intent.getStringExtra("contraseña").toString()
+        val tipoUsuario = intent.getStringExtra("tipoUsuario").toString().toInt()
 
-        btnBack.setOnClickListener {
-            val intent = Intent(this, registro::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        btnFinish.setOnClickListener {
-            val intent = Intent(this, registroExitoso::class.java)
-            startActivity(intent)
-            finish()
-        }
-
+        //Apartado de los spinners
         val spinnerCarreras: Spinner = findViewById(R.id.spinner_carrera)
         val spinnerGeneros: Spinner = findViewById(R.id.spinner_genero)
         val spinnerProvincias: Spinner = findViewById(R.id.spinner_provincia)
@@ -75,7 +76,7 @@ class FinishProfile : AppCompatActivity() {
                 id: Long
             ) {
                 val selectedItem = carreras[position]
-                Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
@@ -88,7 +89,7 @@ class FinishProfile : AppCompatActivity() {
                                         id: Long
             ) {
                 val selectedItem = generos[position]
-                Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
@@ -101,7 +102,7 @@ class FinishProfile : AppCompatActivity() {
                                         id: Long
             ) {
                 val selectedItem = provincias[position]
-                Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
@@ -114,7 +115,7 @@ class FinishProfile : AppCompatActivity() {
                                         id: Long
             ) {
                 val selectedItem = cantones[position]
-                Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
@@ -127,10 +128,37 @@ class FinishProfile : AppCompatActivity() {
                                         id: Long
             ) {
                 val selectedItem = distritos[position]
-                Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this@FinishProfile,"$selectedItem", Toast.LENGTH_SHORT).show()
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
+        }
+
+        btnBack.setOnClickListener {
+            val intent = Intent(this, registro::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btnFinish.setOnClickListener {
+            val telefono = txtTelefono.text.toString()
+            val carrera = spinnerCarreras.selectedItem.toString()
+            val genero = spinnerGeneros.selectedItem.toString()
+            val provincia = spinnerProvincias.selectedItem.toString()
+            val canton = spinnerCantones.selectedItem.toString()
+            val distrito = spinnerDistritos.selectedItem.toString()
+                if (telefono.isNotEmpty())
+                {
+                    usuarioControler.insertarUsuario(nombre,apellido,email,contraseña,telefono,carrera,genero,provincia,canton,distrito,tipoUsuario)
+                }
+                else
+                {
+                    Toast.makeText(this, "Se debe digitar el numero de telefono", Toast.LENGTH_SHORT).show()
+                    txtTelefono.error = "Falta el número de telefono"
+                }
+            val intent = Intent(this, registroExitoso::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

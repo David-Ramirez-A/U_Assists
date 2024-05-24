@@ -11,8 +11,8 @@
     tools:context=".teacher_selected">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="373dp"
+        android:layout_height="148dp"
         android:orientation="horizontal">
 
         <ImageButton
@@ -20,8 +20,10 @@
             android:layout_width="77dp"
             android:layout_height="86dp"
             android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/boton_de_volver"
             android:scaleType="fitCenter"
-            android:src="@drawable/angle_left" />
+            android:src="@drawable/angle_left"
+            tools:ignore="ImageContrastCheck" />
 
 
         <FrameLayout
@@ -31,14 +33,17 @@
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/imagen_de_perfil"
+                android:scaleType="centerInside"
                 app:srcCompat="@drawable/circle" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imageProfile"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="164dp"
+                android:layout_height="164dp"
                 android:layout_gravity="center"
                 android:scaleType="centerCrop"
                 android:src="@drawable/circle_user"
@@ -50,9 +55,10 @@
 
     <LinearLayout
         android:layout_width="320sp"
-        android:layout_height="531dp"
+        android:layout_height="628dp"
         android:layout_gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="TextSizeCheck,VisualLintBounds">
 
         <TextView
             android:id="@+id/textView6"
@@ -63,13 +69,16 @@
             android:textSize="38sp" />
 
         <EditText
-            android:id="@+id/editTextPhone"
+            android:id="@+id/txtTelefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/hint_phone"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:minHeight="48dp"
+            tools:ignore="TextContrastCheck" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,7 +96,8 @@
             <Spinner
                 android:id="@+id/spinner_carrera"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -106,7 +116,8 @@
             <Spinner
                 android:id="@+id/spinner_genero"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -125,7 +136,8 @@
             <Spinner
                 android:id="@+id/spinner_provincia"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -144,7 +156,8 @@
             <Spinner
                 android:id="@+id/spinner_canton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -163,7 +176,8 @@
             <Spinner
                 android:id="@+id/spinner_distrito"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
         </LinearLayout>
 
         <Button

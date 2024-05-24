@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,6 +16,9 @@ class login : AppCompatActivity() {
     lateinit var btnContraseña: Button
     lateinit var btnCrearCuenta: Button
     lateinit var btnVolver: ImageButton
+    lateinit var txtEmail: TextView
+    lateinit var txtContrasena: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
@@ -23,11 +28,44 @@ class login : AppCompatActivity() {
         btnContraseña = findViewById(R.id.btnOlvideContrasena)
         btnCrearCuenta = findViewById(R.id.btnCrearcuenta)
         btnVolver = findViewById(R.id.btnVolverAIncio)
+        txtEmail = findViewById(R.id.txtEmail)
+        txtContrasena = findViewById(R.id.txtContraseña)
 
         btnLogin.setOnClickListener {
-            val intent = Intent(this, tutorList::class.java)
-            startActivity(intent)
-            finish()
+            val email = txtEmail.text.toString()
+            val contrasena = txtContrasena.text.toString()
+
+            if(email.isNotEmpty() && contrasena.isNotEmpty())
+            {
+                //if(existeUsuario(email))
+                if(email=="a")
+                {
+                    //if(usuarioCorrecto(email,contrasena))
+                    if(email=="a" && contrasena=="1")
+                    {
+                        val intent = Intent(this, tutorList::class.java)
+                        intent.putExtra("Usuario",email)
+                        startActivity(intent)
+                        finish()
+                    }
+                    else
+                    {
+                        Toast.makeText(this, "Contraseña invalida", Toast.LENGTH_SHORT).show()
+                        txtContrasena.error = "La contraseña no es correcta"
+                    }
+                }
+                else
+                {
+                    txtEmail.error = "El email no se encuentra registrado"
+                    Toast.makeText(this, "Error de usuario", Toast.LENGTH_SHORT).show()
+                }
+            }
+            else
+            {
+                Toast.makeText(this, "Debe introducir el usuario y contraseña para iniciar secion", Toast.LENGTH_SHORT).show()
+                txtEmail.error = "Debe escribir el email"
+                txtContrasena.error = "Debe escribir la contraseña"
+            }
         }
 
         btnContraseña.setOnClickListener {
@@ -47,10 +85,5 @@ class login : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }*/
     }
 }

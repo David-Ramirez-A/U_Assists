@@ -22,8 +22,8 @@ class FinishProfile : AppCompatActivity() {
     lateinit var btnBack: ImageButton
     lateinit var btnFinish: Button
     lateinit var txtTelefono :EditText
-
-    private val usuarioControler = UsarioControler()
+    //Declaracion del controler donde se comunica con la base de datos y con el modelo
+    private lateinit var usuarioControler: UsarioControler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         println("Llegue aquí")
@@ -33,14 +33,15 @@ class FinishProfile : AppCompatActivity() {
         btnBack = findViewById(R.id.btnBack)
         btnFinish = findViewById(R.id.btnFinish)
         txtTelefono = findViewById(R.id.txtTelefono)
+        //Inicialización del objeto del controler
+        usuarioControler = UsarioControler()
 
         //Recibimiento de la informacion que estaba en la pantalla anterior
-        /*
         val nombre = intent.getStringExtra("nombre").toString()
         val apellido = intent.getStringExtra("apellido").toString()
         val email = intent.getStringExtra("email").toString()
         val contraseña = intent.getStringExtra("contraseña").toString()
-        val tipoUsuario = intent.getStringExtra("tipoUsuario").toString().toInt()*/
+        val tipoUsuario = intent.getStringExtra("tipoUsuario").toString().toInt()
 
         //Apartado de los spinners
         val spinnerCarreras: Spinner = findViewById(R.id.spinner_carrera)
@@ -142,7 +143,7 @@ class FinishProfile : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-        /*
+
         btnFinish.setOnClickListener {
             val telefonoSeleccionado = txtTelefono.text.toString()
             val carreraSeleccionada = spinnerCarreras.selectedItem.toString()
@@ -163,6 +164,6 @@ class FinishProfile : AppCompatActivity() {
             val intent = Intent(this, registroExitoso::class.java)
             startActivity(intent)
             finish()
-        }*/
+        }
     }
 }

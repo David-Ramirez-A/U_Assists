@@ -1,72 +1,53 @@
 package Modelo
 
+import com.google.firebase.firestore.PropertyName
+import org.jetbrains.annotations.PropertyKey
+
 class Usario
 {
-    private var nombre : String
-        get() {
-            return  nombre
-        }
-        set(value) {nombre = value}
+    @get:PropertyName("nombre")
+    @set:PropertyName("nombre")
+    var nombre : String
 
-    private var apellido : String
-        get() {
-            return  apellido
-        }
-        set(value) {apellido = value}
+    @get:PropertyName("apellido")
+    @set:PropertyName("apellido")
+    var apellido : String
 
-    private var email : String
-        get() {
-            return email
-        }
-        set(value) {email = value}
+    @get:PropertyName("email")
+    @set:PropertyName("email")
+    var email : String
 
-    private var contrasena : String
-        get() {
-            return contrasena
-        }
-        set(value) {contrasena = value}
+    @get:PropertyName("contrasena")
+    @set:PropertyName("contrasena")
+    var contrasena : String
 
-    private var telefono : String
-        get() {
-            return telefono
-        }
-        set(value) {telefono = value}
+    @get:PropertyName("telefono")
+    @set:PropertyName("telefono")
+    var telefono : String
 
-    private var carrera : String
-        get() {
-            return carrera
-        }
-        set(value) {carrera = value}
+    @get:PropertyName("carrera")
+    @set:PropertyName("carrera")
+    var carrera : String
 
-    private var genero : String
-        get() {
-            return genero
-        }
-        set(value) {genero = value}
+    @get:PropertyName("genero")
+    @set:PropertyName("genero")
+    var genero : String
 
-    private var provincia : String
-        get() {
-            return provincia
-        }
-        set(value) {provincia = value}
+    @get:PropertyName("provincia")
+    @set:PropertyName("provincia")
+    var provincia : String
 
-    private var canton : String
-        get() {
-            return canton
-        }
-        set(value) {canton = value}
+    @get:PropertyName("canton")
+    @set:PropertyName("canton")
+    var canton : String
 
-    private var distrito : String
-        get() {
-            return distrito
-        }
-        set(value) {distrito = value}
+    @get:PropertyName("distrito")
+    @set:PropertyName("distrito")
+    var distrito : String
 
-    private var tipousuario : Int
-        get() {
-            return tipousuario
-        }
-        set(value) {tipousuario = value}
+    @get:PropertyName("tipousuario")
+    @set:PropertyName("tipousuario")
+    var tipousuario : Int
     //El tipo de usuario se define de la siguiente forma
     // 1 = Estudiante particular
     // 2 = Tutor
@@ -99,7 +80,4 @@ class Usario
         this.distrito = ""
         this.tipousuario = 0
     }
-
-
-
 }

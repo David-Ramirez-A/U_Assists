@@ -1,5 +1,6 @@
 package com.example.uassists
 
+import Controler.UsarioControler
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -19,6 +20,9 @@ class login : AppCompatActivity() {
     lateinit var txtEmail: TextView
     lateinit var txtContrasena: TextView
 
+    //Declaracion del controler donde se comunica con la base de datos y con el modelo
+    private lateinit var usuarioControler: UsarioControler
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
@@ -31,33 +35,38 @@ class login : AppCompatActivity() {
         txtEmail = findViewById(R.id.txtEmail)
         txtContrasena = findViewById(R.id.txtContraseña)
 
+        //Inicialización del objeto del controler
+        usuarioControler = UsarioControler()
+
         btnLogin.setOnClickListener {
             val email = txtEmail.text.toString()
             val contrasena = txtContrasena.text.toString()
 
             if(email.isNotEmpty() && contrasena.isNotEmpty())
             {
-                //if(existeUsuario(email))
-                if(email=="a")
-                {
-                    //if(usuarioCorrecto(email,contrasena))
-                    if(email=="a" && contrasena=="1")
+                usuarioControler.existeUsuario(email) { exists ->
+                    if (exists)
+                    //if(email=="a")
                     {
-                        val intent = Intent(this, tutorList::class.java)
-                        intent.putExtra("Usuario",email)
-                        startActivity(intent)
-                        finish()
+                        //if (email == "a" && contrasena == "1")
+                        if(usuarioControler.usuarioCorrecto(email,contrasena))
+                        {
+                            val intent = Intent(this, tutorList::class.java)
+                            intent.putExtra("Usuario", email)
+                            startActivity(intent)
+                            finish()
+                        }
+                        else
+                        {
+                            Toast.makeText(this, "Contraseña invalida", Toast.LENGTH_SHORT).show()
+                            txtContrasena.error = "La contraseña no es correcta"
+                        }
                     }
                     else
                     {
-                        Toast.makeText(this, "Contraseña invalida", Toast.LENGTH_SHORT).show()
-                        txtContrasena.error = "La contraseña no es correcta"
+                        txtEmail.error = "El email no se encuentra registrado"
+                        Toast.makeText(this, "Error de usuario", Toast.LENGTH_SHORT).show()
                     }
-                }
-                else
-                {
-                    txtEmail.error = "El email no se encuentra registrado"
-                    Toast.makeText(this, "Error de usuario", Toast.LENGTH_SHORT).show()
                 }
             }
             else

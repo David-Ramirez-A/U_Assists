@@ -59,7 +59,7 @@
         android:background="@drawable/borde_edit_text"
         android:ems="10"
         android:hint="@string/constrase_a"
-        android:inputType="text"
+        android:inputType="text|textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

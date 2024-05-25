@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,11 +21,12 @@ import android.widget.Toast
 class FinishProfile : AppCompatActivity() {
     lateinit var btnBack: ImageButton
     lateinit var btnFinish: Button
-    lateinit var txtTelefono :TextView
+    lateinit var txtTelefono :EditText
 
     private val usuarioControler = UsarioControler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        println("Llegue aquí")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish_profile)
 
@@ -33,11 +35,12 @@ class FinishProfile : AppCompatActivity() {
         txtTelefono = findViewById(R.id.txtTelefono)
 
         //Recibimiento de la informacion que estaba en la pantalla anterior
+        /*
         val nombre = intent.getStringExtra("nombre").toString()
         val apellido = intent.getStringExtra("apellido").toString()
         val email = intent.getStringExtra("email").toString()
         val contraseña = intent.getStringExtra("contraseña").toString()
-        val tipoUsuario = intent.getStringExtra("tipoUsuario").toString().toInt()
+        val tipoUsuario = intent.getStringExtra("tipoUsuario").toString().toInt()*/
 
         //Apartado de los spinners
         val spinnerCarreras: Spinner = findViewById(R.id.spinner_carrera)
@@ -139,26 +142,27 @@ class FinishProfile : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
+        /*
         btnFinish.setOnClickListener {
-            val telefono = txtTelefono.text.toString()
-            val carrera = spinnerCarreras.selectedItem.toString()
-            val genero = spinnerGeneros.selectedItem.toString()
-            val provincia = spinnerProvincias.selectedItem.toString()
-            val canton = spinnerCantones.selectedItem.toString()
-            val distrito = spinnerDistritos.selectedItem.toString()
-                if (telefono.isNotEmpty())
-                {
-                    usuarioControler.insertarUsuario(nombre,apellido,email,contraseña,telefono,carrera,genero,provincia,canton,distrito,tipoUsuario)
-                }
-                else
-                {
-                    Toast.makeText(this, "Se debe digitar el numero de telefono", Toast.LENGTH_SHORT).show()
-                    txtTelefono.error = "Falta el número de telefono"
-                }
+            val telefonoSeleccionado = txtTelefono.text.toString()
+            val carreraSeleccionada = spinnerCarreras.selectedItem.toString()
+            val generoSeleccionado = spinnerGeneros.selectedItem.toString()
+            val provinciaSeleccionada = spinnerProvincias.selectedItem.toString()
+            val cantonSeleccionada = spinnerCantones.selectedItem.toString()
+            val distritoSeleccionado = spinnerDistritos.selectedItem.toString()
+            if (telefonoSeleccionado.isNotEmpty())
+            {
+                usuarioControler.insertarUsuario(nombre,apellido,email,contraseña,telefonoSeleccionado,carreraSeleccionada,
+                    generoSeleccionado,provinciaSeleccionada,cantonSeleccionada,distritoSeleccionado,tipoUsuario)
+            }
+            else
+            {
+                Toast.makeText(this, "Se debe digitar el numero de telefono", Toast.LENGTH_SHORT).show()
+                txtTelefono.error = "Falta el número de telefono"
+            }
             val intent = Intent(this, registroExitoso::class.java)
             startActivity(intent)
             finish()
-        }
+        }*/
     }
 }

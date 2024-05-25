@@ -3,6 +3,7 @@ package com.example.uassists
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -14,11 +15,11 @@ class registro : AppCompatActivity()
 {
     lateinit var btnRegistrarUsuario: Button
     lateinit var btnVolver: ImageButton
-    lateinit var txtNombre: TextView
-    lateinit var txtApellido: TextView
-    lateinit var txtEmailRegistro: TextView
-    lateinit var txtContrasenaRegistro: TextView
-    lateinit var txtConfirmarContrasenaRegistro: TextView
+    lateinit var txtNombre: EditText
+    lateinit var txtApellido: EditText
+    lateinit var txtEmailRegistro: EditText
+    lateinit var txtContrasenaRegistro: EditText
+    lateinit var txtConfirmarContrasenaRegistro: EditText
     lateinit var rgTipoUsuario: RadioGroup
     lateinit var rbTutor: RadioButton
     lateinit var rbEstudiante: RadioButton
@@ -74,11 +75,11 @@ class registro : AppCompatActivity()
                                         if(contrasenaRegistro == confirmarContrasenaRegistro)
                                         {
                                             val intent = Intent(this, FinishProfile::class.java)
-                                            intent.putExtra("nombre",nombre)
-                                            intent.putExtra("apellido",apellido)
-                                            intent.putExtra("email",emailRegistro)
-                                            intent.putExtra("contraseña",contrasenaRegistro)
-                                            intent.putExtra("tipoUsuario",tipoUsuario)
+                                            //intent.putExtra("nombre",nombre)
+                                            //intent.putExtra("apellido",apellido)
+                                            //intent.putExtra("email",emailRegistro)
+                                            //intent.putExtra("contraseña",contrasenaRegistro)
+                                            //intent.putExtra("tipoUsuario",tipoUsuario)
                                             startActivity(intent)
                                             finish()
                                         }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "6332796719",
+    "project_id": "u-assists-28efa",
+    "storage_bucket": "u-assists-28efa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6332796719:android:480855864b2bba3836dbda",
+        "android_client_info": {
+          "package_name": "com.example.uassists"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6bYhBo3YvB1UlpeZ5hfYQag3fOta7or4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

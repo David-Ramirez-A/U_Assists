@@ -26,6 +26,10 @@
     <string name="nueva_contrase_a">Nueva Contraseña</string>
     <string name="te_has_cambiado_tu_contrase_a_con_xito">Te has cambiado tu contraseña con éxito</string>
     <string name="ve_al">Ve al</string>
+    <string name="review_hint">Escribe tu reseña aquí</string>
+    <string name="grade">Calificacion</string>
+    <string name="feedback">Reseña</string>
+    <string name="boton_calificar">Calificar</string>
     <string name="introduction">La App de tutorías\n
         universitaria para\n
         estudiantes en\n
@@ -55,6 +59,13 @@ Dirección: Heredia, Belen, San Antonio</string>
     <string name="titulo_canton">Canton</string>
     <string name="titulo_distrito">Distrito</string>
     <string name="imagen_de_perfil">Imagen de perfil</string>
+    <string-array name="numeros">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
     <string-array name="carreras">
         <item>Ingeniería Civil</item>
         <item>Psicología</item>

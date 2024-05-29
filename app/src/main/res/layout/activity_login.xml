@@ -1,124 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/lines"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".login">
 
-    <Button
-        android:id="@+id/btnIngresarLogin"
-        android:layout_width="280dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginBottom="208dp"
-        android:backgroundTint="#3A8AC9"
-        android:text="@string/ingresar"
-        android:textColor="#C5EEFC"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="45sp"
+        android:layout_marginBottom="45sp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView"
+        <ImageButton
+            android:id="@+id/btnVolverAIncio"
+            android:layout_width="59sp"
+            android:layout_height="65sp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/boton_de_volver"
+            android:scaleType="centerInside"
+            android:src="@drawable/angle_left"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="214sp"
+            android:layout_height="65sp"
+            android:layout_marginLeft="35sp"
+            app:srcCompat="@drawable/marca" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="128dp"
-        android:text="@string/no_tienes_cuenta"
-        android:textColor="#33577B"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="VisualLintOverlap" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnCrearcuenta"
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8sp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/iniciar_sesi_n"
+            android:textColor="#1B325F"
+            android:textSize="46sp" />
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="308sp"
+            android:layout_height="54sp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8sp"
+            android:layout_marginBottom="8sp"
+            android:autofillHints=""
+            android:background="@drawable/borde_edit_text"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="@string/email"
+            android:inputType="text"
+            tools:ignore="TextFields" />
+
+        <EditText
+            android:id="@+id/txtContraseña"
+            android:layout_width="308sp"
+            android:layout_height="54sp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8sp"
+            android:layout_marginBottom="8sp"
+            android:autofillHints=""
+            android:background="@drawable/borde_edit_text"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="@string/constrase_a"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnOlvideContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/cardview_shadow_end_color"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/olvidaste_tu_contrase_a"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#F26C4F"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnIngresarLogin"
+            android:layout_width="180sp"
+            android:layout_height="65sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8sp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#3A8AC9"
+            android:text="@string/ingresar"
+            android:textColor="#C5EEFC"
+            android:textSize="24sp"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="116dp"
-        android:background="@color/cardview_shadow_end_color"
-        android:text="@string/crear_una_cuenta"
-        android:textColor="#F44336"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/txtContraseña"
-        android:layout_width="309dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="408dp"
-        android:autofillHints=""
-        android:background="@drawable/borde_edit_text"
-        android:ems="10"
-        android:hint="@string/constrase_a"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/no_tienes_cuenta"
+            android:textColor="#33577B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="VisualLintOverlap" />
 
-    <EditText
-        android:id="@+id/txtEmail"
-        style="@android:style/Widget.Holo.EditText"
-        android:layout_width="308dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="524dp"
-        android:autofillHints=""
-        android:background="@drawable/borde_edit_text"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextFields" />
+        <Button
+            android:id="@+id/btnCrearcuenta"
+            android:layout_width="199dp"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_shadow_end_color"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/crear_una_cuenta"
+            android:textColor="#F26C4F"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnOlvideContrasena"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="344dp"
-        android:background="@color/cardview_shadow_end_color"
-        android:text="@string/olvidaste_tu_contrase_a"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#F44336"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="283dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="100dp"
-        android:contentDescription="@string/Logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="ImageContrastCheck" />
-
-    <ImageButton
-        android:id="@+id/btnVolverAIncio"
-        android:layout_width="71dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="116dp"
-        android:adjustViewBounds="true"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/boton_de_volver"
-        android:scaleType="centerInside"
-        android:src="@drawable/angle_left"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

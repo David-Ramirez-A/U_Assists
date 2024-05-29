@@ -1,185 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/lines"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".registro">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="310dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="72dp"
-        android:contentDescription="@string/Logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        tools:ignore="ImageContrastCheck" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45sp"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/txtConfirmarContrasena"
-        android:layout_width="374dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="572dp"
-        android:autofillHints=""
-        android:background="@drawable/borde_edit_text"
-        android:ems="10"
-        android:hint="@string/confirmar_contrase_a"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageButton
+            android:id="@+id/btnVolverALogin"
+            android:layout_width="71dp"
+            android:layout_height="69dp"
+            android:layout_marginRight="35sp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/boton_de_volver"
+            android:scaleType="centerInside"
+            android:src="@drawable/angle_left"
+            tools:ignore="ImageContrastCheck" />
 
-    <EditText
-        android:id="@+id/txtApellido"
-        android:layout_width="190dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="192dp"
-        android:layout_marginTop="368dp"
-        android:autofillHints=""
-        android:background="@drawable/borde_edit_text"
-        android:ems="10"
-        android:hint="@string/apellido"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtEmailRegistro"
-        android:layout_width="374dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="436dp"
-        android:autofillHints=""
-        android:background="@drawable/borde_edit_text"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextFields" />
-
-    <EditText
-        android:id="@+id/txtNombre"
-        android:layout_width="162dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="368dp"
-        android:autofillHints=""
-        android:background="@drawable/borde_edit_text"
-        android:ems="10"
-        android:hint="@string/nombre"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtContrasenaRegistro"
-        android:layout_width="374dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="500dp"
-        android:autofillHints=""
-        android:background="@drawable/borde_edit_text"
-        android:ems="10"
-        android:hint="@string/constrase_a"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/marca" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="252dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="24sp"
+        android:layout_marginBottom="12sp"
         android:text="@string/registrase"
         android:textColor="#2E4369"
         android:textSize="55sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="VisualLintBounds" />
 
-    <Button
-        android:id="@+id/btnRegistrarUsuario"
-        android:layout_width="272dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="752dp"
-        android:backgroundTint="#3A8AC9"
-        android:text="@string/registrar"
-        android:textColor="#C5EEFC"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck,VisualLintBounds" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <RadioGroup
-        android:id="@+id/rgTipoUsuario"
-        android:layout_width="254dp"
-        android:layout_height="51dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtConfirmarContrasena"
-        app:layout_constraintVertical_bias="0.139">
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="162dp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+            android:autofillHints=""
+            android:background="@drawable/borde_edit_text"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="@string/nombre"
+            android:inputType="text" />
 
-        <RadioButton
-            android:id="@+id/rbEstudiante"
-            android:layout_width="143dp"
-            android:layout_height="wrap_content"
-            android:text="@string/estudiante"
+        <EditText
+            android:id="@+id/txtApellido"
+            android:layout_width="190dp"
+            android:layout_height="50sp"
+            android:layout_margin="5sp"
+            android:autofillHints=""
+            android:background="@drawable/borde_edit_text"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_medium"
+            android:hint="@string/apellido"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/txtEmailRegistro"
+        android:layout_width="360sp"
+        android:layout_height="50sp"
+        android:layout_margin="5sp"
+        android:autofillHints=""
+        android:background="@drawable/borde_edit_text"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="@string/email"
+        android:inputType="text"
+        tools:ignore="TextFields" />
+
+    <EditText
+        android:id="@+id/txtContrasenaRegistro"
+        android:layout_width="360sp"
+        android:layout_height="50sp"
+        android:layout_margin="5sp"
+        android:autofillHints=""
+        android:background="@drawable/borde_edit_text"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="@string/constrase_a"
+        android:inputType="textPassword"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/txtConfirmarContrasena"
+        android:layout_width="360sp"
+        android:layout_height="50sp"
+        android:layout_margin="5sp"
+        android:autofillHints=""
+        android:background="@drawable/borde_edit_text"
+        android:ems="10"
+        android:fontFamily="@font/quicksand_medium"
+        android:hint="@string/confirmar_contrase_a"
+        android:inputType="textPassword" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/qu_eres"
             android:textColor="#2E4369"
             android:textSize="20sp"
             android:textStyle="bold"
             tools:ignore="TextSizeCheck" />
 
-        <RadioButton
-            android:id="@+id/rbTutor"
-            android:layout_width="115dp"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="@string/tutor"
-            android:textColor="#2E4369"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="VisualLintBounds" />
-    </RadioGroup>
+        <RadioGroup
+            android:id="@+id/rgTipoUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="51dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="140dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="664dp"
-        android:text="@string/qu_eres"
-        android:textColor="#2E4369"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck" />
+            <RadioButton
+                android:id="@+id/rbEstudiante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="@string/estudiante"
+                android:textColor="#2E4369"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextSizeCheck" />
 
-    <ImageButton
-        android:id="@+id/btnVolverALogin"
-        android:layout_width="71dp"
-        android:layout_height="69dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
-        android:adjustViewBounds="true"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/boton_de_volver"
-        android:scaleType="centerInside"
-        android:src="@drawable/angle_left"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ImageContrastCheck" />
+            <RadioButton
+                android:id="@+id/rbTutor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_medium"
+                android:minHeight="48dp"
+                android:text="@string/tutor"
+                android:textColor="#2E4369"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="VisualLintBounds" />
+        </RadioGroup>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnRegistrarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:layout_margin="12sp"
+        android:backgroundTint="#3A8AC9"
+        android:fontFamily="@font/quicksand_medium"
+        android:text="@string/registrar"
+        android:textColor="#C5EEFC"
+        android:textSize="28sp"
+        app:cornerRadius="8dp"
+        tools:ignore="TextContrastCheck,VisualLintBounds" />
+
+</LinearLayout>

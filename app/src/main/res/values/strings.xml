@@ -5,8 +5,8 @@
     <string name="constrase_a">Constraseña</string>
     <string name="email">Email</string>
     <string name="crear_una_cuenta">Crear una cuenta</string>
-    <string name="olvidaste_tu_contrase_a">Olvidaste tu contraseña</string>
-    <string name="no_tienes_cuenta">No tienes cuenta</string>
+    <string name="olvidaste_tu_contrase_a">¿Olvidaste tu contraseña?</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
     <string name="estudiante">Estudiante</string>
     <string name="tutor">Tutor</string>
     <string name="confirmar_contrase_a">Confirmar contraseña</string>
@@ -14,7 +14,7 @@
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="te_has_registrado_con_exito">Te has registrado con exito</string>
-    <string name="iniciar_sesi_n">iniciar sesión</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
     <string name="ve_a">Ve a</string>
     <string name="buscar">Buscar</string>
     <string name="boton_de_buscar">Boton de buscar</string>
@@ -26,6 +26,10 @@
     <string name="nueva_contrase_a">Nueva Contraseña</string>
     <string name="te_has_cambiado_tu_contrase_a_con_xito">Te has cambiado tu contraseña con éxito</string>
     <string name="ve_al">Ve al</string>
+    <string name="introduction">La App de tutorías\n
+        universitaria para\n
+        estudiantes en\n
+        problemas</string>
     <string name="inicio">Inicio</string>
     <string name="text_profile">Nombre: Anthony Rojas Fallas\n
         Teléfono: 8354-9345\n

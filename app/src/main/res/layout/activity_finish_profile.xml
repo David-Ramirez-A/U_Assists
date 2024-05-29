@@ -11,8 +11,8 @@
     tools:context=".teacher_selected">
 
     <LinearLayout
-        android:layout_width="373dp"
-        android:layout_height="wrap_content"
+        android:layout_width="356dp"
+        android:layout_height="139dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -56,7 +56,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="320sp"
+        android:layout_width="324dp"
         android:layout_height="628dp"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
@@ -83,6 +83,8 @@
             android:hint="@string/hint_phone"
             android:inputType="phone"
             android:minHeight="48dp"
+            android:textColor="#000000"
+            android:textColorHint="#85000000"
             tools:ignore="TextContrastCheck" />
 
         <LinearLayout
@@ -103,7 +105,8 @@
                 android:id="@+id/spinner_carrera"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                />
         </LinearLayout>
 
         <LinearLayout

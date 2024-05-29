@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lines"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".review">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="45sp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnVolverTutor"
+            android:layout_width="59sp"
+            android:layout_height="65sp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:adjustViewBounds="true"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/boton_de_volver"
+            android:scaleType="centerInside"
+            android:src="@drawable/angle_left"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37sp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/marca" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/grade"
+            android:textSize="22sp" />
+
+        <Spinner
+            android:id="@+id/spinner_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_medium"
+            android:text="@string/feedback"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_width="300sp"
+            android:layout_height="199dp"
+            android:background="@drawable/borde_edit_text"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="start|top"
+            android:hint="@string/review_hint"
+            android:inputType="textMultiLine" />
+    </LinearLayout>
+
+</LinearLayout>

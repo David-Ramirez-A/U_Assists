@@ -21,7 +21,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
             android:background="@drawable/shape_bar"
             android:orientation="horizontal">
 
@@ -51,407 +53,423 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/llTutor1"
+        <TextView
+            android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/shape"
-            android:orientation="horizontal"
-            android:padding="5dp">
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:text="@string/tutor_lista_titulo"
+            android:textColor="#1B325F"
+            android:textSize="38sp" />
 
-            <TextView
-                android:id="@+id/nombre1"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Anthony Rojas Fallas"
-                android:textColor="#1B325F" />
-
-            <TextView
-                android:id="@+id/curso1"
-                android:layout_width="11dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Química"
-                android:textColor="#1B325F" />
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="0"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/star"
-                    tools:ignore="ImageContrastCheck" />
-
-                <TextView
-                    android:id="@+id/calificacion1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="4.5"
-                    android:textColor="#E9F2F9"
-                    tools:ignore="TextContrastCheck" />
-            </FrameLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/shape"
-            android:orientation="horizontal"
-            android:padding="5dp">
+            android:layout_height="525sp">
 
-            <TextView
-                android:id="@+id/nombre2"
-                android:layout_width="102dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Stephanie Castro Porras"
-                android:textColor="#1B325F"
-                tools:ignore="TextSizeCheck" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/curso2"
-                android:layout_width="11dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Ing. Informat."
-                android:textColor="#1B325F"
-                tools:ignore="TextSizeCheck" />
-
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0">
-
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="0"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/star"
-                    tools:ignore="ImageContrastCheck" />
-
-                <TextView
-                    android:id="@+id/calificacion2"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/llTutor1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="4.7"
-                    android:textColor="#E9F2F9"
-                    tools:ignore="TextContrastCheck" />
-            </FrameLayout>
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/nombre1"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Anthony Rojas Fallas"
+                        android:textColor="#1B325F" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/shape"
-            android:orientation="horizontal"
-            android:padding="5dp">
+                    <TextView
+                        android:id="@+id/curso1"
+                        android:layout_width="11dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Química"
+                        android:textColor="#1B325F" />
 
-            <TextView
-                android:id="@+id/nombre3"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Alejandro Rodriguez Alvarado"
-                android:textColor="#1B325F"
-                tools:ignore="TextSizeCheck" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
 
-            <TextView
-                android:id="@+id/curso3"
-                android:layout_width="11dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Matemáticas"
-                android:textColor="#1B325F"
-                tools:ignore="TextSizeCheck" />
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="0"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/star"
+                            tools:ignore="ImageContrastCheck" />
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0">
+                        <TextView
+                            android:id="@+id/calificacion1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="4.5"
+                            android:textColor="#E9F2F9"
+                            tools:ignore="TextContrastCheck" />
+                    </FrameLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="0"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/star"
-                    tools:ignore="ImageContrastCheck" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/calificacion3"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="3.9"
-                    android:textColor="#E9F2F9"
-                    tools:ignore="TextContrastCheck" />
-            </FrameLayout>
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/nombre2"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Stephanie Castro Porras"
+                        android:textColor="#1B325F"
+                        tools:ignore="TextSizeCheck" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/shape"
-            android:orientation="horizontal"
-            android:padding="5dp">
+                    <TextView
+                        android:id="@+id/curso2"
+                        android:layout_width="11dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Ing. Informat."
+                        android:textColor="#1B325F"
+                        tools:ignore="TextSizeCheck" />
 
-            <TextView
-                android:id="@+id/nombre4"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Sandra Torres Sans"
-                android:textColor="#1B325F" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
 
-            <TextView
-                android:id="@+id/curso4"
-                android:layout_width="11dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Ciencias Soc."
-                android:textColor="#1B325F"
-                tools:ignore="TextSizeCheck" />
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="0"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/star"
+                            tools:ignore="ImageContrastCheck" />
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0">
+                        <TextView
+                            android:id="@+id/calificacion2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="4.7"
+                            android:textColor="#E9F2F9"
+                            tools:ignore="TextContrastCheck" />
+                    </FrameLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="0"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/star"
-                    tools:ignore="ImageContrastCheck" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/calificacion4"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="5.0"
-                    android:textColor="#E9F2F9"
-                    tools:ignore="TextContrastCheck" />
-            </FrameLayout>
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/nombre3"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Alejandro Rodriguez Alvarado"
+                        android:textColor="#1B325F"
+                        tools:ignore="TextSizeCheck" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/shape"
-            android:orientation="horizontal"
-            android:padding="5dp">
+                    <TextView
+                        android:id="@+id/curso3"
+                        android:layout_width="11dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Matemáticas"
+                        android:textColor="#1B325F"
+                        tools:ignore="TextSizeCheck" />
 
-            <TextView
-                android:id="@+id/nombre5"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Andres Soto Castillo"
-                android:textColor="#1B325F" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
 
-            <TextView
-                android:id="@+id/curso5"
-                android:layout_width="11dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Arquitectura"
-                android:textColor="#1B325F" />
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="0"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/star"
+                            tools:ignore="ImageContrastCheck" />
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0">
+                        <TextView
+                            android:id="@+id/calificacion3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="3.9"
+                            android:textColor="#E9F2F9"
+                            tools:ignore="TextContrastCheck" />
+                    </FrameLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="0"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/star"
-                    tools:ignore="ImageContrastCheck" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/calificacion5"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="4.9"
-                    android:textColor="#E9F2F9"
-                    tools:ignore="TextContrastCheck" />
-            </FrameLayout>
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/nombre4"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Sandra Torres Sans"
+                        android:textColor="#1B325F" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/shape"
-            android:orientation="horizontal"
-            android:padding="5dp">
+                    <TextView
+                        android:id="@+id/curso4"
+                        android:layout_width="11dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Ciencias Soc."
+                        android:textColor="#1B325F"
+                        tools:ignore="TextSizeCheck" />
 
-            <TextView
-                android:id="@+id/nombre6"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Lucy Webb Arroyo"
-                android:textColor="#1B325F" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
 
-            <TextView
-                android:id="@+id/curso6"
-                android:layout_width="11dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Veterinaria"
-                android:textColor="#1B325F" />
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="0"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/star"
+                            tools:ignore="ImageContrastCheck" />
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0">
+                        <TextView
+                            android:id="@+id/calificacion4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="5.0"
+                            android:textColor="#E9F2F9"
+                            tools:ignore="TextContrastCheck" />
+                    </FrameLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="0"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/star"
-                    tools:ignore="ImageContrastCheck" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/calificacion6"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="4.2"
-                    android:textColor="#E9F2F9"
-                    tools:ignore="TextContrastCheck" />
-            </FrameLayout>
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/nombre5"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Andres Soto Castillo"
+                        android:textColor="#1B325F" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/shape"
-            android:orientation="horizontal"
-            android:padding="5dp">
+                    <TextView
+                        android:id="@+id/curso5"
+                        android:layout_width="11dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Arquitectura"
+                        android:textColor="#1B325F" />
 
-            <TextView
-                android:id="@+id/nombre7"
-                android:layout_width="102dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Aaron Ramirez Vega"
-                android:textColor="#1B325F" />
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
 
-            <TextView
-                android:id="@+id/curso7"
-                android:layout_width="11dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:fontFamily="@font/quicksand_medium"
-                android:text="Ing. Civil"
-                android:textColor="#1B325F" />
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="0"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/star"
+                            tools:ignore="ImageContrastCheck" />
 
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0">
+                        <TextView
+                            android:id="@+id/calificacion5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="4.9"
+                            android:textColor="#E9F2F9"
+                            tools:ignore="TextContrastCheck" />
+                    </FrameLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="0"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/star"
-                    tools:ignore="ImageContrastCheck" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/calificacion7"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:text="4.5"
-                    android:textColor="#E9F2F9"
-                    tools:ignore="TextContrastCheck" />
-            </FrameLayout>
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
 
-        </LinearLayout>
+                    <TextView
+                        android:id="@+id/nombre6"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Lucy Webb Arroyo"
+                        android:textColor="#1B325F" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="135dp">
+                    <TextView
+                        android:id="@+id/curso6"
+                        android:layout_width="11dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Veterinaria"
+                        android:textColor="#1B325F" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="0"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/star"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/calificacion6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="4.2"
+                            android:textColor="#E9F2F9"
+                            tools:ignore="TextContrastCheck" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/nombre7"
+                        android:layout_width="102dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Aaron Ramirez Vega"
+                        android:textColor="#1B325F" />
+
+                    <TextView
+                        android:id="@+id/curso7"
+                        android:layout_width="11dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:text="Ing. Civil"
+                        android:textColor="#1B325F" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="0"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/star"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/calificacion7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="4.5"
+                            android:textColor="#E9F2F9"
+                            tools:ignore="TextContrastCheck" />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="88dp"
-            android:background="#FFFFFF">
+            android:background="#FFFFFF"
+            tools:layout_editor_absoluteY="665dp">
 
             <ImageButton
                 android:id="@+id/btnBuscar"
@@ -473,8 +491,8 @@
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/arrow_right_from_bracket"
-                tools:layout_editor_absoluteY="2dp"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="2dp" />
 
             <ImageButton
                 android:id="@+id/btnPerfil"

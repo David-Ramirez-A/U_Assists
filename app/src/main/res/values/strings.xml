@@ -1,4 +1,5 @@
 <resources>
+    <string name="tutor_lista_titulo">Tutores</string>
     <string name="app_name">U Assists</string>
     <string name="ingresar">Ingresar</string>
     <string name="registrar">Registrar</string>
@@ -134,4 +135,16 @@ Dirección: Heredia, Belen, San Antonio</string>
         <item>Merced</item>
         <item>Hatillo</item>
     </string-array>
+    <string name="reviewJP">Jean Paul Castillo Vives</string>
+    <string name="feedbackJP">Grandioso tutor, aprendi mucho de el, es muy atento, explica muy bien, da distintos ejemplos y hace bastante practica.</string>
+    <string name="gradeJP">5</string>
+    <string name="reviewD">David Ramírez Arce</string>
+    <string name="feedbackD">Un tutor muy agradable, con buena metodología para explicar los temas.</string>
+    <string name="gradeD">5</string>
+    <string name="reviewM">Jean Paul Castillo Vives</string>
+    <string name="feedbackM">Grandioso tutor, aprendi mucho de el, es muy atento, explica muy bien, da distintos ejemplos y hace bastante practica.</string>
+    <string name="gradeM">5</string>
+    <string name="reviewA">Jean Paul Castillo Vives</string>
+    <string name="feedbackA">Grandioso tutor, aprendi mucho de el, es muy atento, explica muy bien, da distintos ejemplos y hace bastante practica.</string>
+    <string name="gradeA">5</string>
 </resources>

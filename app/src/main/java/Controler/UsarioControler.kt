@@ -69,10 +69,13 @@ class UsarioControler
         }
         return false
     }
+    fun listaEstudiantes()
+    {
 
-    fun tutores(): MutableList<Usario> {
-        val listTutores : MutableList<Usario> = mutableListOf()
+    }
 
-        return listTutores
+    fun listaTutores()
+    {
+
     }
 }

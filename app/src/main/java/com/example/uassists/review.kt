@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 class review : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Lo siguiente permite que la app se extienda por completo en la pantalla
         enableEdgeToEdge()
         setContentView(R.layout.activity_review)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

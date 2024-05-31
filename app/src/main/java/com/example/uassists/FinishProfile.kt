@@ -26,9 +26,15 @@ class FinishProfile : AppCompatActivity() {
     private lateinit var usuarioControler: UsarioControler
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        println("Llegue aquí")
         super.onCreate(savedInstanceState)
+        //Lo siguiente permite que la app se extienda por completo en la pantalla
+        enableEdgeToEdge()
         setContentView(R.layout.activity_finish_profile)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         btnBack = findViewById(R.id.btnBack)
         btnFinish = findViewById(R.id.btnFinish)

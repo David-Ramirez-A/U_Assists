@@ -83,7 +83,7 @@
             android:background="@drawable/borde_edit_text"
             android:ems="10"
             android:fontFamily="@font/quicksand_medium"
-            android:hint="@string/constrase_a"
+            android:hint="@string/contrase_a"
             android:inputType="textPassword"
             android:textColor="#000000"
             android:textColorHint="#85000000" />

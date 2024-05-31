@@ -12,8 +12,15 @@ class cambioExitoso : AppCompatActivity() {
     lateinit var btnVolver: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //enableEdgeToEdge()
+        //Lo siguiente permite que la app se extienda por completo en la pantalla
+        enableEdgeToEdge()
         setContentView(R.layout.activity_cambio_exitoso)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
 
         btnVolver = findViewById(R.id.btnVolverCambioExito)
 

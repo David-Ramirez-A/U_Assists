@@ -18,8 +18,14 @@ class inicio : AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        //enableEdgeToEdge()
+        //Lo siguiente permite que la app se extienda por completo en la pantalla
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         btnRegistrar = findViewById(R.id.btnRegistrar)
         btnIngresar = findViewById(R.id.btnIngresar)
@@ -37,11 +43,5 @@ class inicio : AppCompatActivity()
             startActivity(intent)
             finish()
         }
-        /*
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }*/
     }
 }

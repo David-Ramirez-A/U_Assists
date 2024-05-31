@@ -1,5 +1,6 @@
 package com.example.uassists
 
+import Controler.UsarioControler
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,7 +10,10 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 class registro : AppCompatActivity()
 {
@@ -23,12 +27,23 @@ class registro : AppCompatActivity()
     lateinit var rgTipoUsuario: RadioGroup
     lateinit var rbTutor: RadioButton
     lateinit var rbEstudiante: RadioButton
+
+    //Declaracion del controler donde se comunica con la base de datos y con el modelo
+    private lateinit var usuarioControler: UsarioControler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Lo siguiente permite que la app se extienda por completo en la pantalla
+        enableEdgeToEdge()
         setContentView(R.layout.activity_registro)
-
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+        //Botnoes
         btnRegistrarUsuario = findViewById(R.id.btnRegistrarUsuario)
         btnVolver = findViewById(R.id.btnVolverALogin)
+
         //Cuadros de texto
         txtNombre = findViewById(R.id.txtNombre)
         txtApellido = findViewById(R.id.txtApellido)
@@ -36,11 +51,13 @@ class registro : AppCompatActivity()
         txtContrasenaRegistro = findViewById(R.id.txtContrasenaRegistro)
         txtConfirmarContrasenaRegistro = findViewById(R.id.txtConfirmarContrasena)
         rgTipoUsuario = findViewById(R.id.rgTipoUsuario)
+
         //Radio buttons
         rbTutor = findViewById(R.id.rbTutor)
         rbEstudiante = findViewById(R.id.rbEstudiante)
 
-
+        //Inicialización del objeto del controler
+        usuarioControler = UsarioControler()
 
         btnRegistrarUsuario.setOnClickListener {
             val nombre = txtNombre.text.toString()
@@ -74,14 +91,24 @@ class registro : AppCompatActivity()
                                     {
                                         if(contrasenaRegistro == confirmarContrasenaRegistro)
                                         {
-                                            val intent = Intent(this, FinishProfile::class.java)
-                                            intent.putExtra("nombre",nombre)
-                                            intent.putExtra("apellido",apellido)
-                                            intent.putExtra("email",emailRegistro)
-                                            intent.putExtra("contraseña",contrasenaRegistro)
-                                            intent.putExtra("tipoUsuario",tipoUsuario)
-                                            startActivity(intent)
-                                            finish()
+                                            usuarioControler.existeUsuario(emailRegistro){ exists ->
+                                                if (exists)
+                                                {
+                                                    Toast.makeText(this, "Ya hay una cuenta con ese Email", Toast.LENGTH_SHORT).show()
+                                                    txtEmailRegistro.error = "Ya hay una cuenta con ese Email"
+                                                }
+                                                else
+                                                {
+                                                    val intent = Intent(this, FinishProfile::class.java)
+                                                    intent.putExtra("nombre",nombre)
+                                                    intent.putExtra("apellido",apellido)
+                                                    intent.putExtra("email",emailRegistro)
+                                                    intent.putExtra("contraseña",contrasenaRegistro)
+                                                    intent.putExtra("tipoUsuario",tipoUsuario)
+                                                    startActivity(intent)
+                                                    finish()
+                                                }
+                                            }
                                         }
                                         else
                                         {

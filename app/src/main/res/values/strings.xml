@@ -3,7 +3,7 @@
     <string name="app_name">U Assists</string>
     <string name="ingresar">Ingresar</string>
     <string name="registrar">Registrar</string>
-    <string name="constrase_a">Constraseña</string>
+    <string name="contrase_a">Contraseña</string>
     <string name="email">Email</string>
     <string name="crear_una_cuenta">Crear una cuenta</string>
     <string name="olvidaste_tu_contrase_a">¿Olvidaste tu contraseña?</string>
@@ -147,4 +147,9 @@ Dirección: Heredia, Belen, San Antonio</string>
     <string name="reviewA">Jean Paul Castillo Vives</string>
     <string name="feedbackA">Grandioso tutor, aprendi mucho de el, es muy atento, explica muy bien, da distintos ejemplos y hace bastante practica.</string>
     <string name="gradeA">5</string>
+    <string name="boton_de_logout">boton de logout</string>
+    <string name="boton_de_perfil">boton de perfil</string>
+    <string name="estudiantes">estudiantes</string>
+    <string name="bienvenidos">bienvenidos</string>
+    <string name="bienvenidos_a">Bienvenidos a</string>
 </resources>

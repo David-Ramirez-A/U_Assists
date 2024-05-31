@@ -14,8 +14,9 @@
         android:id="@+id/textView14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/bienvenidos"
         android:gravity="center_horizontal"
-        android:text="Bienvenidos a"
+        android:text="@string/bienvenidos_a"
         android:textColor="#1B325F"
         android:textSize="48sp" />
 
@@ -23,6 +24,7 @@
         android:id="@+id/imageView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/Logo"
         app:srcCompat="@drawable/marca" />
 
     <ImageView
@@ -30,6 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="32sp"
+        android:contentDescription="@string/estudiantes"
         app:srcCompat="@drawable/jovenes_estudiando" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,17 +47,20 @@
             android:layout_height="80dp"
             android:layout_marginStart="4dp"
             android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/boton_de_buscar"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/magnifying_glass_menu" />
+            app:srcCompat="@drawable/magnifying_glass_menu"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/btnLogOut"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/boton_de_logout"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/arrow_right_from_bracket"
@@ -66,12 +72,14 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/boton_de_perfil"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/circle_user"
-            tools:layout_editor_absoluteY="2dp" />
+            tools:layout_editor_absoluteY="2dp"
+            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

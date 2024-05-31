@@ -3,7 +3,7 @@ package Modelo
 import com.google.firebase.firestore.PropertyName
 import org.jetbrains.annotations.PropertyKey
 
-class Usario
+class Usuario
 {
     @get:PropertyName("nombre")
     @set:PropertyName("nombre")

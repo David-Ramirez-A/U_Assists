@@ -37,6 +37,7 @@
             android:layout_width="214sp"
             android:layout_height="65sp"
             android:layout_gravity="center|center_horizontal"
+            android:contentDescription="@string/Logo"
             app:srcCompat="@drawable/marca" />
 
     </LinearLayout>
@@ -69,7 +70,7 @@
         android:fontFamily="@font/quicksand_medium"
         android:hint="@string/email"
         android:inputType="text"
-        tools:ignore="TextFields" />
+        tools:ignore="TextFields,TextContrastCheck" />
 
     <EditText
         android:id="@+id/txtNuevaContrasena"
@@ -84,7 +85,7 @@
         android:fontFamily="@font/quicksand_medium"
         android:hint="@string/nueva_contrase_a"
         android:inputType="text"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/txtConfirmarNueva"
@@ -98,7 +99,8 @@
         android:ems="10"
         android:fontFamily="@font/quicksand_medium"
         android:hint="@string/nueva_contrase_a"
-        android:inputType="text" />
+        android:inputType="text"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btnCambiarContraseña"
@@ -113,6 +115,6 @@
         android:textColor="#C5EEFC"
         android:textSize="24sp"
         app:cornerRadius="12dp"
-        tools:ignore="VisualLintButtonSize" />
+        tools:ignore="VisualLintButtonSize,TextSizeCheck" />
 
 </LinearLayout>

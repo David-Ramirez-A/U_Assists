@@ -25,8 +25,13 @@ class login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //enableEdgeToEdge()
+        enableEdgeToEdge()
         setContentView(R.layout.activity_login)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
 
         btnLogin = findViewById(R.id.btnIngresarLogin)
         btnContraseña = findViewById(R.id.btnOlvideContrasena)
@@ -46,12 +51,10 @@ class login : AppCompatActivity() {
             {
                 usuarioControler.existeUsuario(email) { exists ->
                     if (exists)
-                    //if(email=="a")
                     {
-                        //if (email == "a" && contrasena == "1")
                         if(usuarioControler.usuarioCorrecto(email,contrasena))
                         {
-                            val intent = Intent(this, tutorList::class.java)
+                            val intent = Intent(this, bienvenidos::class.java)
                             intent.putExtra("Usuario", email)
                             startActivity(intent)
                             finish()

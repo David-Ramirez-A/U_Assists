@@ -69,7 +69,7 @@
         android:ems="10"
         android:fontFamily="@font/quicksand_medium"
         android:hint="@string/email"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         tools:ignore="TextFields,TextContrastCheck" />
 
     <EditText
@@ -84,7 +84,7 @@
         android:ems="10"
         android:fontFamily="@font/quicksand_medium"
         android:hint="@string/nueva_contrase_a"
-        android:inputType="text"
+        android:inputType="textPassword"
         tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     <EditText
@@ -99,7 +99,7 @@
         android:ems="10"
         android:fontFamily="@font/quicksand_medium"
         android:hint="@string/nueva_contrase_a"
-        android:inputType="text"
+        android:inputType="textPassword"
         tools:ignore="TextContrastCheck" />
 
     <Button

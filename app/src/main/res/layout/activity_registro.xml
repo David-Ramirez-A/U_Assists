@@ -95,7 +95,7 @@
         android:ems="10"
         android:fontFamily="@font/quicksand_medium"
         android:hint="@string/email"
-        android:inputType="text"
+        android:inputType="textEmailAddress"
         android:textColor="#000000"
         android:textColorHint="#85000000"
         tools:ignore="TextFields,TextContrastCheck" />

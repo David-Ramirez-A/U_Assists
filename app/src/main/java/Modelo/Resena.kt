@@ -4,29 +4,35 @@ import com.google.firebase.firestore.PropertyName
 
 class Resena
 {
-    @get:PropertyName("tutor")
-    @set:PropertyName("tutor")
-    var tutor : String
+    @get:PropertyName("evaluado")
+    @set:PropertyName("evaluado")
+    var evaluado : String
 
-    @get:PropertyName("estudiante")
-    @set:PropertyName("estudiante")
-    var estudiante : String
+    @get:PropertyName("evaluador")
+    @set:PropertyName("evaluador")
+    var evaluador : String
 
     @get:PropertyName("calificacion")
     @set:PropertyName("calificacion")
     var calificacion : String
 
-    constructor(tutor:String, estudiante:String, calificacion:String)
+    @get:PropertyName("evaluacion")
+    @set:PropertyName("evaluacion")
+    var evaluacion : String
+
+    constructor(evaluado:String, evaluador:String, calificacion:String, evaluacion:String)
     {
-        this.tutor = tutor
-        this.estudiante = estudiante
+        this.evaluado = evaluado
+        this.evaluador = evaluador
         this.calificacion = calificacion
+        this.evaluacion = evaluacion
     }
 
     constructor()
     {
-        this.tutor = ""
-        this.estudiante = ""
+        this.evaluado = ""
+        this.evaluador = ""
         this.calificacion = ""
+        this.evaluacion = ""
     }
 }

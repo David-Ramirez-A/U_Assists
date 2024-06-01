@@ -12,13 +12,17 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class tutorList : AppCompatActivity() {
     lateinit var btnBuscar: ImageButton
     lateinit var btnPerfil: ImageButton
     lateinit var btnLogOut: ImageButton
     lateinit var lblTitulo: TextView
-    lateinit var llTutor1: LinearLayout
+
+    //Esta parte se declara la plantilla para la lista de usuarios
+    lateinit var recyclerView: RecyclerView
 
     //Declaracion del controler donde se comunica con la base de datos y con el modelo
     private lateinit var usuarioControler: UsarioControler
@@ -37,7 +41,11 @@ class tutorList : AppCompatActivity() {
         btnPerfil = findViewById(R.id.btnPerfil)
         btnLogOut = findViewById(R.id.btnLogOut)
         lblTitulo = findViewById(R.id.lblTitulo)
-        llTutor1 = findViewById(R.id.llTutor1)
+
+        //Conexion que el activity de la plantilla
+        recyclerView = findViewById(R.id.llUsuario)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.setHasFixedSize(true)
 
         //Recibimiento de la informacion que estaba en la pantalla anterior
         val usuario = intent.getStringExtra("Usuario").toString()
@@ -46,31 +54,19 @@ class tutorList : AppCompatActivity() {
         //Inicialización del objeto del controler
         usuarioControler = UsarioControler()
 
-        @SuppressLint("SetTextI18n")
         fun cargarLista()
         {
             if(tipoUsuario=="1")//Estudiante
             {
                 lblTitulo.text = "Tutores disponibles"
                 val listaTutores =  usuarioControler.listaTutores()
-                val tamanoLista = listaTutores?.size
-                for(i in 0 until tamanoLista!!)
-                {
-                    val usuarioTutor = listaTutores[i]
-
-                }
-
+                recyclerView.adapter = AdapterClass(listaTutores)
             }
             if(tipoUsuario=="2")//Tutor
             {
                 lblTitulo.text = "Estudiantes disponibles"
                 val listaEstudiantes = usuarioControler.listaEstudiantes()
-                val tamanoLista = listaEstudiantes?.size
-                for(i in 0 until tamanoLista!!)
-                {
-                    val usurioEstudiante = listaEstudiantes[i]
-
-                }
+                recyclerView.adapter = AdapterClass(listaEstudiantes)
             }
         }
 
@@ -84,6 +80,8 @@ class tutorList : AppCompatActivity() {
 
         btnPerfil.setOnClickListener {
             val intent = Intent(this, ProfileView::class.java)
+            intent.putExtra("Usuario", usuario)
+            intent.putExtra("tipoUsuario", tipoUsuario)
             startActivity(intent)
             finish()
         }
@@ -93,13 +91,7 @@ class tutorList : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
-        llTutor1.setOnClickListener {
-            val intent = Intent(this, teacher_selected::class.java)
-            startActivity(intent)
-            finish()
-        }
-
+        //Se carla la lista ya sea de tutores o estudiantes
         cargarLista()
     }
 }

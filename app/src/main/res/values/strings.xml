@@ -152,4 +152,6 @@ Dirección: Heredia, Belen, San Antonio</string>
     <string name="estudiantes">estudiantes</string>
     <string name="bienvenidos">bienvenidos</string>
     <string name="bienvenidos_a">Bienvenidos a</string>
+    <string name="estrella_calificaci_n">Estrella calificación</string>
+    <string name="calificaci_n">calificación</string>
 </resources>

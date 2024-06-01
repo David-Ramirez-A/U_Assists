@@ -16,7 +16,7 @@
         android:orientation="vertical"
         tools:context=".TutorListFragment"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-51dp">
+        tools:layout_editor_absoluteY="-59dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,13 +65,19 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="525sp">
+            android:layout_height="487dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/llUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!--
                 <LinearLayout
                     android:id="@+id/llTutor1"
                     android:layout_width="match_parent"
@@ -125,8 +131,7 @@
                             android:textColor="#E9F2F9"
                             tools:ignore="TextContrastCheck" />
                     </FrameLayout>
-
-                </LinearLayout>
+                </LinearLayout>-->
 
             </LinearLayout>
         </ScrollView>

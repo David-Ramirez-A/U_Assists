@@ -23,8 +23,15 @@ class teacher_selected : AppCompatActivity() {
 
         btnVolverLista = findViewById(R.id.btnVolverListaT)
 
+        //Recibimiento de la informacion que estaba en la pantalla anterior
+        val usuario = intent.getStringExtra("Usuario").toString()
+        val tipoUsuario = intent.getStringExtra("tipoUsuario").toString()
+        val perfilSeleccionado = intent.getStringExtra("perfil").toString()
+
+        //Metodos de funcionamiento de los botones
         btnVolverLista.setOnClickListener {
             val intent = Intent(this, tutorList::class.java)
+
             startActivity(intent)
             finish()
         }

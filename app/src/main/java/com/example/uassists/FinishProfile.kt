@@ -39,6 +39,7 @@ class FinishProfile : AppCompatActivity() {
         btnBack = findViewById(R.id.btnBack)
         btnFinish = findViewById(R.id.btnFinish)
         txtTelefono = findViewById(R.id.txtTelefono)
+
         //Inicialización del objeto del controler
         usuarioControler = UsarioControler()
 
@@ -79,6 +80,7 @@ class FinishProfile : AppCompatActivity() {
         spinnerCantones.adapter = adapter_cantones
         spinnerDistritos.adapter = adapter_distritos
 
+        //Metodos de funcionamiento de los botones
         spinnerCarreras.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?,
                 view: View?,

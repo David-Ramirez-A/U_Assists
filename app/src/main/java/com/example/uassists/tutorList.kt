@@ -1,12 +1,9 @@
 package com.example.uassists
 
 import Controler.UsarioControler
-import Modelo.Usuario
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -60,16 +57,17 @@ class tutorList : AppCompatActivity() {
             {
                 lblTitulo.text = "Tutores disponibles"
                 val listaTutores =  usuarioControler.listaTutores()
-                recyclerView.adapter = AdapterClass(listaTutores)
+                recyclerView.adapter = AdapterClass(listaTutores, usuario, tipoUsuario,this,this)
             }
             if(tipoUsuario=="2")//Tutor
             {
                 lblTitulo.text = "Estudiantes disponibles"
                 val listaEstudiantes = usuarioControler.listaEstudiantes()
-                recyclerView.adapter = AdapterClass(listaEstudiantes)
+                recyclerView.adapter = AdapterClass(listaEstudiantes, usuario, tipoUsuario,this,this)
             }
         }
 
+        //Metodos de funcionamiento de los botones
         btnBuscar.setOnClickListener {
             val intent = Intent(this, tutorList::class.java)
             intent.putExtra("Usuario", usuario)

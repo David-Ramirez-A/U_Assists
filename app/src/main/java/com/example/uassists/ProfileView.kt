@@ -22,6 +22,7 @@ class ProfileView : AppCompatActivity() {
         }
         btnVolverLista = findViewById(R.id.btnVolverLista)
 
+        //Metodos de funcionamiento de los botones
         btnVolverLista.setOnClickListener {
             val intent = Intent(this, bienvenidos::class.java)
             startActivity(intent)

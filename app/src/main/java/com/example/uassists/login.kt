@@ -43,6 +43,7 @@ class login : AppCompatActivity() {
         //Inicialización del objeto del controler
         usuarioControler = UsarioControler()
 
+        //Metodos de funcionamiento de los botones
         btnLogin.setOnClickListener {
             val email = txtEmail.text.toString()
             val contrasena = txtContrasena.text.toString()

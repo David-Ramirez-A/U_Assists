@@ -22,6 +22,7 @@ class registroExitoso : AppCompatActivity() {
         }
         btnVolverExito = findViewById(R.id.btnVolverExito)
 
+        //Metodos de funcionamiento de los botones
         btnVolverExito.setOnClickListener {
             val intent = Intent(this, login::class.java)
             startActivity(intent)

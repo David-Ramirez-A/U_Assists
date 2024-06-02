@@ -59,6 +59,7 @@ class registro : AppCompatActivity()
         //Inicialización del objeto del controler
         usuarioControler = UsarioControler()
 
+        //Metodos de funcionamiento de los botones
         btnRegistrarUsuario.setOnClickListener {
             val nombre = txtNombre.text.toString()
             val apellido = txtApellido.text.toString()

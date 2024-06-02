@@ -44,6 +44,7 @@ class cambioContrasena : AppCompatActivity() {
         //Inicialización del objeto del controler
         usuarioControler = UsarioControler()
 
+        //Metodos de funcionamiento de los botones
         btnCambiar.setOnClickListener {
             val emailUsuario = txtEmailCambio.text.toString()
             val password = txtContraseñaNueva.text.toString()

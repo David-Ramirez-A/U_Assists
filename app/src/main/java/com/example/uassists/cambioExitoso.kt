@@ -21,18 +21,13 @@ class cambioExitoso : AppCompatActivity() {
             insets
         }
 
-
         btnVolver = findViewById(R.id.btnVolverCambioExito)
 
+        //Metodos de funcionamiento de los botones
         btnVolver.setOnClickListener {
             val intent = Intent(this, inicio::class.java)
             startActivity(intent)
             finish()
         }
-        /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }*/
     }
 }

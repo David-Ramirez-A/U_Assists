@@ -20,7 +20,6 @@ class review : AppCompatActivity() {
             insets
         }
 
-
         //Spinner
         val spinnerNumeros: Spinner = findViewById(R.id.spinner_numero)
         val numeros = resources.getStringArray(R.array.numeros)

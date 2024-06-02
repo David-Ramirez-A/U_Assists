@@ -37,6 +37,7 @@ class bienvenidos : AppCompatActivity()
         //Inicialización del objeto del controler
         usuarioControler = UsarioControler()
 
+        //Metodos de funcionamiento de los botones
         btnBuscar.setOnClickListener {
             val usuarioDB = usuarioControler.getUsuario(usuario)
             val tipoDeUsuario = usuarioDB?.tipousuario.toString()

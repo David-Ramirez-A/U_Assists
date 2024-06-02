@@ -86,6 +86,14 @@
             android:gravity="start|top"
             android:hint="@string/review_hint"
             android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3A89C9"
+            android:text="@string/submit_review"
+            app:cornerRadius="8dp" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,4 +1,5 @@
 <resources>
+    <string name="submit_review">Enviar Reseña</string>
     <string name="tutor_lista_titulo">Tutores</string>
     <string name="app_name">U Assists</string>
     <string name="ingresar">Ingresar</string>

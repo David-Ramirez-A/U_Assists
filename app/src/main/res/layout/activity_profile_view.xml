@@ -28,16 +28,29 @@
             android:layout_height="237dp"
             android:layout_gravity="start">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageProfile"
-                android:layout_width="241dp"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/foto_perfil"
-                android:visibility="visible"
-                app:shapeAppearanceOverlay="@style/roundProfileImage" />
+            <FrameLayout
+                android:layout_width="235dp"
+                android:layout_height="match_parent">
 
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/imagen_de_perfil"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/circle" />
 
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/circle_user"
+                    android:visibility="visible"
+                    app:shapeAppearanceOverlay="@style/roundProfileImage" />
+            </FrameLayout>
 
         </FrameLayout>
     </LinearLayout>

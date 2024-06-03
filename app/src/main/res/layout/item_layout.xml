@@ -8,6 +8,7 @@
     android:layout_marginVertical="10dp"
     app:cardCornerRadius="20dp"
     app:cardElevation="8dp">
+    <!--La parte de arriba configura la forma en la que se va a presentar el Layout-->
     <LinearLayout
         android:id="@+id/llUsuario"
         android:layout_width="match_parent"

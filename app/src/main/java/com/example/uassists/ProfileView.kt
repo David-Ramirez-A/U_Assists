@@ -22,9 +22,15 @@ class ProfileView : AppCompatActivity() {
         }
         btnVolverLista = findViewById(R.id.btnVolverLista)
 
+        //Recibimiento de la informacion que estaba en la pantalla anterior
+        val usuario = intent.getStringExtra("Usuario").toString()
+        val tipoUsuario = intent.getStringExtra("tipoUsuario").toString()
+
         //Metodos de funcionamiento de los botones
         btnVolverLista.setOnClickListener {
             val intent = Intent(this, bienvenidos::class.java)
+            intent.putExtra("Usuario", usuario)
+            intent.putExtra("tipoUsuario", tipoUsuario)
             startActivity(intent)
             finish()
         }

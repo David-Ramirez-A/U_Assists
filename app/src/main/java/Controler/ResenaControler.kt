@@ -20,7 +20,7 @@ class ResenaControler
 
     fun insertarResena(evaluado:String, evaluador:String, calificacion:String, evaluacion:String)
     {
-        resena = Resena()
+        resena = Resena(evaluado,evaluador,calificacion,evaluacion)
         baseDatos.collection("reseñas").document(evaluado)
             .set(resena)
             //Indicar que se logro registrar exitosamente
@@ -37,9 +37,10 @@ class ResenaControler
     {
         val solicitud = coleccionResenas.whereEqualTo("evaluado", email).get()
         val solicitudResultante = runBlocking { solicitud.await() }
+        val listaResenas = mutableListOf<Resena>()
         if(!solicitudResultante.isEmpty)
         {
-            val listaResenas = mutableListOf<Resena>()
+
             for (document in solicitudResultante.documents) {
                 val nuevaResena = document.toObject<Resena>()
                 if (nuevaResena != null)
@@ -49,7 +50,7 @@ class ResenaControler
             }
             return listaResenas
         }
-        return null
+        return listaResenas
     }
 
     fun getPromedio(evaluado: String) :String

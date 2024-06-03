@@ -34,8 +34,7 @@
     <string name="boton_calificar">Calificar</string>
     <string name="introduction">La App de tutorías\n
         universitaria para\n
-        estudiantes en\n
-        problemas</string>
+        estudiantes</string>
     <string name="inicio">Inicio</string>
     <string name="text_profile">Nombre: Anthony Rojas Fallas\n
         Teléfono: 8354-9345\n
@@ -155,4 +154,7 @@ Dirección: Heredia, Belen, San Antonio</string>
     <string name="bienvenidos_a">Bienvenidos a</string>
     <string name="estrella_calificaci_n">Estrella calificación</string>
     <string name="calificaci_n">calificación</string>
+    <string name="calificacion_asisgnada">Calificacion asisgnada</string>
+    <string name="usuario_que_hacer_el_review">Usuario que hacer el review</string>
+    <string name="rese_as">Reseñas</string>
 </resources>

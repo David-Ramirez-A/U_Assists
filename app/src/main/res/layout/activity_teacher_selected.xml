@@ -1,189 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@drawable/lines"
-android:orientation="vertical"
-android:padding="25dp"
-    tools:context=".teacher_selected">
-
-<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="239dp"
-    android:orientation="horizontal">
-
-    <ImageButton
-        android:id="@+id/btnVolverListaT"
-        android:layout_width="63dp"
-        android:layout_height="86dp"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="fitCenter"
-        android:src="@drawable/angle_left" />
-
-    <FrameLayout
-        android:layout_width="297dp"
-        android:layout_height="237dp"
-        android:layout_gravity="start">
-
-        <FrameLayout
-            android:layout_width="235dp"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:contentDescription="@string/imagen_de_perfil"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/circle" />
-
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageProfile"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:src="@drawable/circle_user"
-                android:visibility="visible"
-                app:shapeAppearanceOverlay="@style/roundProfileImage" />
-        </FrameLayout>
-        <FrameLayout
-            android:layout_width="103dp"
-            android:layout_height="105dp"
-            android:layout_gravity="right">
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="105dp"
-                android:layout_height="103dp"
-                android:layout_gravity="right"
-                android:src="@drawable/star" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/quicksand_medium"
-                android:gravity="center_vertical"
-                android:text="4.5"
-                android:textColor="#E9F2F9"
-                android:textSize="32sp" />
-        </FrameLayout>
-
-    </FrameLayout>
-</LinearLayout>
+    android:layout_height="match_parent"
+    android:background="@drawable/lines"
+    tools:context=".teacher_selected">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="425sp"
-        android:layout_margin="10dp"
-        android:background="@drawable/shape"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textView"
+        android:layout_height="match_parent"
+        android:background="@drawable/lines"
+        android:orientation="vertical"
+        android:padding="25dp">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:fontFamily="@font/quicksand_medium"
-            android:text="@string/text_profile"
-            android:textSize="20sp" />
+            android:layout_height="239dp"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:backgroundTint="#3A89C9"
-            android:text="@string/boton_calificar"
-            android:textSize="20sp"
-            app:cornerRadius="8sp" />
+            <ImageButton
+                android:id="@+id/btnVolverListaT"
+                android:layout_width="63dp"
+                android:layout_height="86dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/boton_de_volver"
+                android:scaleType="fitCenter"
+                android:src="@drawable/angle_left" />
 
-        <ScrollView
+            <FrameLayout
+                android:layout_width="297dp"
+                android:layout_height="237dp"
+                android:layout_gravity="start">
+
+                <FrameLayout
+                    android:layout_width="235dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/imagen_de_perfil"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/circle" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imageProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/circle_user"
+                        android:visibility="visible"
+                        app:shapeAppearanceOverlay="@style/roundProfileImage" />
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="103dp"
+                    android:layout_height="105dp"
+                    android:layout_gravity="right">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="105dp"
+                        android:layout_height="103dp"
+                        android:layout_gravity="right"
+                        android:contentDescription="@string/estrella_calificaci_n"
+                        android:src="@drawable/star" />
+
+                    <TextView
+                        android:id="@+id/lblCalificaciónPerfil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/quicksand_medium"
+                        android:gravity="center_vertical"
+                        android:text="4.5"
+                        android:textColor="#E9F2F9"
+                        android:textSize="32sp"
+                        tools:ignore="TextContrastCheck" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="425sp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/lblPerfil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_margin="8dp"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="@string/text_profile"
+                android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/textView17"
+            <Button
+                android:id="@+id/btnCalificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="#3A89C9"
+                android:text="@string/boton_calificar"
+                android:textSize="20sp"
+                app:cornerRadius="8sp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/quicksand_medium"
-                    android:padding="4sp"
-                    android:text="Reseñas" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="4sp">
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/nombreReviewer1"
-                        android:layout_width="125sp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:text="@string/reviewJP" />
-
-                    <TextView
-                        android:id="@+id/feedback1"
-                        android:layout_width="185sp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:text="@string/feedbackJP" />
-
-                    <TextView
-                        android:id="@+id/grade1"
+                        android:id="@+id/textView17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/quicksand_medium"
-                        android:text="@string/gradeJP" />
-                </LinearLayout>
+                        android:padding="4sp"
+                        android:text="@string/rese_as" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="4sp">
-
-                    <TextView
-                        android:id="@+id/nombreReviewer2"
-                        android:layout_width="125sp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:text="@string/reviewD" />
-
-                    <TextView
-                        android:id="@+id/feedback2"
-                        android:layout_width="185sp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:text="@string/feedbackD" />
-
-                    <TextView
-                        android:id="@+id/grade2"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycleViewResena"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/quicksand_medium"
-                        android:text="5" />
+                        android:layout_height="match_parent" />
+
+                    <!-- Estructura del la reseña
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:padding="4sp">
+
+                        <TextView
+                            android:id="@+id/nombreReviewer1"
+                            android:layout_width="125sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="@string/reviewJP" />
+
+                        <TextView
+                            android:id="@+id/feedback1"
+                            android:layout_width="185sp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="@string/feedbackJP" />
+
+                        <TextView
+                            android:id="@+id/grade1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/quicksand_medium"
+                            android:text="@string/gradeJP" />
+                    </LinearLayout>
+                    -->
+
+
                 </LinearLayout>
+            </ScrollView>
 
-            </LinearLayout>
-        </ScrollView>
-
+        </LinearLayout>
     </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

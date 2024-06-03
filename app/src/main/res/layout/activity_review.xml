@@ -37,7 +37,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="37sp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/marca" />
+            android:contentDescription="@string/Logo"
+            app:srcCompat="@drawable/marca"
+            tools:ignore="InefficientWeight" />
     </LinearLayout>
 
 
@@ -77,7 +79,7 @@
             android:textSize="22sp" />
 
         <EditText
-            android:id="@+id/editTextTextMultiLine"
+            android:id="@+id/txtFeedBack"
             android:layout_width="300sp"
             android:layout_height="199dp"
             android:background="@drawable/borde_edit_text"
@@ -85,15 +87,18 @@
             android:fontFamily="@font/quicksand_medium"
             android:gravity="start|top"
             android:hint="@string/review_hint"
-            android:inputType="textMultiLine" />
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            tools:ignore="TextContrastCheck" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btnEnviarResena"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#3A89C9"
             android:text="@string/submit_review"
-            app:cornerRadius="8dp" />
+            app:cornerRadius="8dp"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 
 </LinearLayout>

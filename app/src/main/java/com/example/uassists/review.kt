@@ -69,8 +69,14 @@ class review : AppCompatActivity()
             if (resenaText.isNotEmpty())
             {
                 val calificacion = spinnerNumeros.selectedItem.toString()
-                resenaControler.insertarResena(perfilSeleccionado,nombre,calificacion,resenaText)
-                Toast.makeText(this,"Reseña realizada existosamente",Toast.LENGTH_LONG)
+                if (resenaControler.existeResena(nombre))
+                {
+                    resenaControler.actualizarResena(perfilSeleccionado,nombre,calificacion,resenaText)
+                }
+                else
+                {
+                    resenaControler.insertarResena(perfilSeleccionado,nombre,calificacion,resenaText)
+                }
                 val intent = Intent(this, teacher_selected::class.java)
                 intent.putExtra("Usuario", usuario)
                 intent.putExtra("tipoUsuario", tipoUsuario)

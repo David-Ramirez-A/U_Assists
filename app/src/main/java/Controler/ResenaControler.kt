@@ -1,12 +1,13 @@
 package Controler
 
-import Modelo.Usuario
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import Modelo.Resena
+import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.toObject
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.tasks.await
+
 
 class ResenaControler
 {
@@ -20,8 +21,9 @@ class ResenaControler
 
     fun insertarResena(evaluado:String, evaluador:String, calificacion:String, evaluacion:String)
     {
+        val numeroRegistro = totalRegistros()+1
         resena = Resena(evaluado,evaluador,calificacion,evaluacion)
-        baseDatos.collection("reseñas").document(evaluado)
+        baseDatos.collection("reseñas").document(numeroRegistro.toString())
             .set(resena)
             //Indicar que se logro registrar exitosamente
             .addOnSuccessListener {
@@ -40,8 +42,8 @@ class ResenaControler
         val listaResenas = mutableListOf<Resena>()
         if(!solicitudResultante.isEmpty)
         {
-
-            for (document in solicitudResultante.documents) {
+            for (document in solicitudResultante.documents)
+            {
                 val nuevaResena = document.toObject<Resena>()
                 if (nuevaResena != null)
                 {
@@ -72,6 +74,76 @@ class ResenaControler
             promedio = (suma / tamano!!).toString()
             return promedio
         }
+    }
+
+    fun totalRegistros(): Int
+    {
+        val solicitud = coleccionResenas.get()
+        val solicitudResultante = runBlocking { solicitud.await() }
+        val listaResenas = mutableListOf<Resena>()
+        if(!solicitudResultante.isEmpty)
+        {
+            for (document in solicitudResultante.documents)
+            {
+                val nuevaResena = document.toObject<Resena>()
+                if (nuevaResena != null)
+                {
+                    listaResenas.add(nuevaResena)
+                }
+            }
+        }
+        var total = listaResenas.size
+        return total
+    }
+
+    fun actualizarResena(evaluado:String, evaluador:String, calificacion:String, evaluacion:String)
+    {
+        val numeroRegistro = getDocumento(evaluador)
+        resena = Resena(evaluado,evaluador,calificacion,evaluacion)
+        baseDatos.collection("reseñas").document(numeroRegistro)
+            .set(resena)
+            //Indicar que se logro registrar exitosamente
+            .addOnSuccessListener {
+                println("La reseña fue agregado con éxito")
+            }
+            .addOnFailureListener { e ->
+                // Error al agregar el usuario
+                println("Error al agregar el reseña: $e")
+            }
+    }
+
+    fun existeResena(evaluador: String): Boolean
+    {
+        val solicitud = coleccionResenas.get()
+        val solicitudResultante = runBlocking { solicitud.await() }
+        if(!solicitudResultante.isEmpty)
+        {
+            for (document in solicitudResultante.documents)
+            {
+                val nuevaResena = document.toObject<Resena>()
+                if (nuevaResena != null)
+                {
+                    if(nuevaResena?.evaluador == evaluador)
+                    {
+                        return true
+                    }
+                }
+            }
+            return false
+        }
+        return false
+    }
+
+    fun getDocumento(usuario: String): String
+    {
+        var documentId = ""
+        val solicitud = coleccionResenas.whereEqualTo("evaluador", usuario).limit(1).get()
+        val solicitudResultante = runBlocking { solicitud.await() }
+        if(!solicitudResultante.isEmpty)
+        {
+            documentId = solicitudResultante.documents[0].id
+        }
+        return documentId
     }
 }
 

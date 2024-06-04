@@ -83,58 +83,6 @@ Dirección: Heredia, Belen, San Antonio</string>
         <item>Veterinaria</item>
     </string-array>
 
-    <string-array name="provincias">
-        <item>San José</item>
-        <item>Alajuela</item>
-        <item>Cartago</item>
-        <item>Heredia</item>
-        <item>Guanacaste</item>
-        <item>Puntarenas</item>
-        <item>Limón</item>
-    </string-array>
-
-    <string-array name="generos">
-        <item>Masculino</item>
-        <item>Femenino</item>
-        <item>No Binario</item>
-        <item>Prefiero no decir</item>
-    </string-array>
-
-    <string-array name="cantones">
-        <item>San José</item>
-        <item>Escazú</item>
-        <item>Desamparados</item>
-        <item>Puriscal</item>
-        <item>Aserrí</item>
-        <item>Mora</item>
-        <item>Goicoechea</item>
-        <item>Santa Ana</item>
-        <item>Alajuelita</item>
-        <item>Vázquez de Coronado</item>
-        <item>Acosta</item>
-        <item>Tibás</item>
-        <item>Moravia</item>
-        <item>Montes de Oca</item>
-        <item>Turrubares</item>
-        <item>Dota</item>
-        <item>Curridabat</item>
-        <item>Pérez Zeledón</item>
-        <item>León Cortés Castro</item>
-    </string-array>
-
-    <string-array name="distritos">
-        <item>Carmen</item>
-        <item>Mata Redonda</item>
-        <item>Hospital</item>
-        <item>Catedral</item>
-        <item>Zapote</item>
-        <item>San Francisco de Dos Ríos</item>
-        <item>Uruca</item>
-        <item>Mata Redonda</item>
-        <item>Pavas</item>
-        <item>Merced</item>
-        <item>Hatillo</item>
-    </string-array>
     <string name="reviewJP">Jean Paul Castillo Vives</string>
     <string name="feedbackJP">Grandioso tutor, aprendi mucho de el, es muy atento, explica muy bien, da distintos ejemplos y hace bastante practica.</string>
     <string name="gradeJP">5</string>
@@ -159,4 +107,503 @@ Dirección: Heredia, Belen, San Antonio</string>
     <string name="rese_as">Reseñas</string>
     <string name="buscar_carrera">Buscar Carrera</string>
     <string name="boton_de_buscar_barra_de_lista">boton de buscar barra de lista</string>
+
+    <string-array name="generos">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>No Binario</item>
+        <item>Prefiero no decir</item>
+    </string-array>
+
+    <string-array name="provincias">
+        <item>San José</item>
+        <item>Alajuela</item>
+        <item>Cartago</item>
+        <item>Heredia</item>
+        <item>Guanacaste</item>
+        <item>Puntarenas</item>
+        <item>Limón</item>
+    </string-array>
+
+    <!--Apartado de cantones-->
+    <string-array name="cantones_San_Jose">
+        <item>San José</item>
+        <item>Escazú</item>
+        <item>Desamparados</item>
+        <item>Puriscal</item>
+        <item>Tarrazú</item>
+        <item>Aserrí</item>
+        <item>Mora</item>
+        <item>Goicoechea</item>
+        <item>Santa Ana</item>
+        <item>Alajuelita</item>
+        <item>Vázquez de Coronado</item>
+        <item>Acosta</item>
+        <item>Tibás</item>
+        <item>Moravia</item>
+        <item>Montes de Oca</item>
+        <item>Turrubares</item>
+        <item>Dota</item>
+        <item>Curridabat</item>
+        <item>Pérez Zeledón</item>
+        <item>León Cortés Castro</item>
+    </string-array>
+
+    <string-array name="cantones_Alajuela">
+        <item>Alajuela</item>
+        <item>San Ramón</item>
+        <item>Grecia</item>
+        <item>San Mateo</item>
+        <item>Atenas</item>
+        <item>Naranjo</item>
+        <item>Palmares</item>
+        <item>Poás</item>
+        <item>Orotina</item>
+        <item>San Carlos</item>
+        <item>Zarcero</item>
+        <item>Sarchí</item>
+        <item>Upala</item>
+        <item>Los Chiles</item>
+        <item>Guatuso</item>
+        <item>Río Cuarto</item>
+    </string-array>
+
+    <string-array name="cantones_Cartago">
+        <item>Cartago</item>
+        <item>Paraíso</item>
+        <item>La Unión</item>
+        <item>Jiménez</item>
+        <item>Turrialba</item>
+        <item>Alvarado</item>
+        <item>Oreamuno</item>
+        <item>El Guarco</item>
+    </string-array>
+
+    <string-array name="cantones_Heredia">
+        <item>Heredia</item>
+        <item>Barva</item>
+        <item>Santo Domingo</item>
+        <item>Santa Bárbara</item>
+        <item>San Rafael</item>
+        <item>San Isidro</item>
+        <item>Belén</item>
+        <item>Flores</item>
+        <item>San Pablo</item>
+        <item>Sarapiquí</item>
+    </string-array>
+
+    <string-array name="cantones_Guanacaste">
+        <item>Liberia</item>
+        <item>Nicoya</item>
+        <item>Santa Cruz</item>
+        <item>Bagaces</item>
+        <item>Carrillo</item>
+        <item>Cañas</item>
+        <item>Abangares</item>
+        <item>Tilarán</item>
+        <item>Nandayure</item>
+        <item>La Cruz</item>
+        <item>Hojancha</item>
+    </string-array>
+
+    <string-array name="cantones_Puntarenas">
+        <item>Puntarenas</item>
+        <item>Esparza</item>
+        <item>Buenos Aires</item>
+        <item>Montes de Oro</item>
+        <item>Osa</item>
+        <item>Quepos</item>
+        <item>Golfito</item>
+        <item>Coto Brus</item>
+        <item>Parrita</item>
+        <item>Corredores</item>
+        <item>Garabito</item>
+        <item>Monteverde</item>
+    </string-array>
+
+    <string-array name="cantones_Limón">
+        <item>Limón</item>
+        <item>Pococí</item>
+        <item>Siquirres</item>
+        <item>Talamanca</item>
+        <item>Matina</item>
+        <item>Guácimo</item>
+    </string-array>
+
+    <!--Apartado de distritos -->
+
+    <!-- Distritos de San José-->
+    <string-array name="distritos_San_Jose">
+        <item>Carmen</item>
+        <item>Merced</item>
+        <item>Hospital</item>
+        <item>Catedral</item>
+        <item>Zapote</item>
+        <item>San Francisco de Dos Ríos</item>
+        <item>Uruca</item>
+        <item>Mata Redonda</item>
+        <item>Pavas</item>
+        <item>Hatillo</item>
+        <item>San Sebastián</item>
+    </string-array>
+
+    <string-array name="distritos_Escazú">
+        <item>Escazú</item>
+        <item>San Antonio</item>
+        <item>San Rafael</item>
+    </string-array>
+
+    <string-array name="distritos_Desamparados">
+        <item>Desamparados</item>
+        <item>San Miguel</item>
+        <item>San Juan de Dios</item>
+        <item>San Rafael Arriba</item>
+        <item>San Antonio</item>
+        <item>Frailes</item>
+        <item>Patarra</item>
+        <item>San Cristobal</item>
+        <item>Rosario</item>
+        <item>Damas</item>
+        <item>San Rafael Abajo</item>
+        <item>Gravilias</item>
+        <item>Los Guido</item>
+    </string-array>
+
+    <string-array name="distritos_Puriscal">
+        <item>Santiago</item>
+        <item>Mercedes Sur</item>
+        <item>Barbacoas</item>
+        <item>Grifo Alto</item>
+        <item>San Rafael</item>
+        <item>Candelarita</item>
+        <item>Desamparaditos</item>
+        <item>San Antonio</item>
+        <item>Chires</item>
+    </string-array>
+
+    <string-array name="distritos_Tarrazú">
+        <item>San Marcos</item>
+        <item>San Lorenzo</item>
+        <item>San Carlos</item>
+    </string-array>
+
+    <string-array name="distritos_Aserrí">
+        <item>Aserrí</item>
+        <item>Tarbaca</item>
+        <item>Vuelta de Jorco</item>
+        <item>San Gabriel</item>
+        <item>Legua</item>
+        <item>Monterrey</item>
+        <item>Salitrillos</item>
+    </string-array>
+
+    <string-array name="distritos_Mora">
+        <item>Colón</item>
+        <item>Guayabo</item>
+        <item>Tabarcia</item>
+        <item>Piedras Negras</item>
+        <item>Picagres</item>
+        <item>Jaris</item>
+        <item>Quitirrisí</item>
+    </string-array>
+
+    <string-array name="distritos_Goicoechea">
+        <item>Guadalupe</item>
+        <item>San Francisco</item>
+        <item>Calle Blancos</item>
+        <item>Mata de Plátano</item>
+        <item>Ipis</item>
+        <item>Rancho Redondo</item>
+        <item>Purral</item>
+    </string-array>
+
+    <string-array name="distritos_Santa_Ana">
+        <item>Santa Ana</item>
+        <item>Salitral</item>
+        <item>Pozos</item>
+        <item>Uruca</item>
+        <item>Piedades</item>
+        <item>Brasil</item>
+    </string-array>
+
+    <string-array name="distritos_Alajuelita">
+        <item>Alajuelita</item>
+        <item>San Josecito</item>
+        <item>San Antonio</item>
+        <item>Concepción</item>
+        <item>San Felipe</item>
+    </string-array>
+
+    <string-array name="distritos_Vazquez_de_Coronado">
+        <item>San Isidro</item>
+        <item>San Rafael</item>
+        <item>Dulce Nombre de Jesús</item>
+        <item>Patalillo</item>
+        <item>Cascajal</item>
+    </string-array>
+
+    <string-array name="distritos_Acosta">
+        <item>San Ignacio</item>
+        <item>Guaitil</item>
+        <item>Palmichal</item>
+        <item>Cangrejal</item>
+        <item>Sabanillas</item>
+    </string-array>
+
+    <string-array name="distritos_Tibás">
+        <item>San Juan</item>
+        <item>Cinco Esquinas</item>
+        <item>Anselmo Llorente</item>
+        <item>León XIII</item>
+        <item>Colima</item>
+    </string-array>
+
+    <string-array name="distritos_Moravia">
+        <item>San Vicente</item>
+        <item>San Jerónimo</item>
+        <item>La Trinidad</item>
+    </string-array>
+
+    <string-array name="distritos_Montes_de_Oca">
+        <item>San Pedro</item>
+        <item>Sabanilla</item>
+        <item>Mercedes</item>
+        <item>San Rafael</item>
+    </string-array>
+
+    <string-array name="distritos_Turrubares">
+        <item>San Pablo</item>
+        <item>San Pedro</item>
+        <item>San Juan de Mata</item>
+        <item>San Luis</item>
+        <item>Carara</item>
+    </string-array>
+
+    <string-array name="distritos_Dota">
+        <item>Santa María</item>
+        <item>Jardín</item>
+        <item>Copey</item>
+    </string-array>
+
+    <string-array name="distritos_Curridabat">
+        <item>Curridabat</item>
+        <item>Granadilla</item>
+        <item>Sánchez</item>
+        <item>Tirrases</item>
+    </string-array>
+
+    <string-array name="distritos_Pérez_Zeledón">
+        <item>San Isidro de El General</item>
+        <item>El General</item>
+        <item>Daniel Flores</item>
+        <item>Rivas</item>
+        <item>San Pedro</item>
+        <item>Platanares</item>
+        <item>Pejibaye</item>
+        <item>Cajón</item>
+        <item>Barú</item>
+        <item>Río Nuevo</item>
+        <item>Paramo</item>
+        <item>La Amistad</item>
+    </string-array>
+
+    <string-array name="distritos_León_Cortés_Castro">
+        <item>San Pablo</item>
+        <item>San Andrés</item>
+        <item>Llano Bonito</item>
+        <item>San Isidro</item>
+        <item>Santa Cruz</item>
+        <item>San Antonio</item>
+    </string-array>
+
+    <!--Distritos de Alajuela -->
+    <string-array name="distritos_Alajuela">
+        <item>Alajuela</item>
+        <item>San José</item>
+        <item>Carrizal</item>
+        <item>San Antonio</item>
+        <item>Guácima</item>
+        <item>San Isidro</item>
+        <item>Sabanilla</item>
+        <item>San Rafael</item>
+        <item>Río Segundo</item>
+        <item>Desamparados</item>
+        <item>Turrucares</item>
+        <item>Tambor</item>
+        <item>Garita</item>
+        <item>Sarapiquí</item>
+    </string-array>
+
+    <string-array name="distritos_San_Ramón">
+        <item>San Ramón</item>
+        <item>Santiago</item>
+        <item>San Juan</item>
+        <item>Piedades Norte</item>
+        <item>Piedades Sur</item>
+        <item>San Rafael</item>
+        <item>San Isidro</item>
+        <item>Ángeles</item>
+        <item>Alfaro</item>
+        <item>Volio</item>
+        <item>Concepción</item>
+        <item>Zapotal</item>
+        <item>Peñas Blancas</item>
+        <item>San Lorenzo</item>
+    </string-array>
+
+    <string-array name="distritos_Grecia">
+        <item>Grecia</item>
+        <item>San Isidro</item>
+        <item>San José</item>
+        <item>San Roque</item>
+        <item>Tacares</item>
+        <item>Puente de Piedra</item>
+        <item>Bolivar</item>
+    </string-array>
+
+    <string-array name="distritos_San_Mateo">
+        <item>San Mateo</item>
+        <item>Desmonte</item>
+        <item>Jesús María</item>
+        <item>Labrador</item>
+    </string-array>
+
+    <string-array name="distritos_Atenas">
+        <item>Atenas</item>
+        <item>Jesús</item>
+        <item>Mercedes</item>
+        <item>San Isidro</item>
+        <item>Concepción</item>
+        <item>San José</item>
+        <item>Santa Eulalia</item>
+        <item>Escobal</item>
+    </string-array>
+
+    <string-array name="distritos_Naranjo">
+        <item>Naranjo</item>
+        <item>San Miguel</item>
+        <item>San José</item>
+        <item>Cirrí Sur</item>
+        <item>San Jerónimo</item>
+        <item>San Juan</item>
+        <item>El Rosario</item>
+        <item>Palmitos</item>
+    </string-array>
+
+    <string-array name="distritos_Palmares">
+        <item>Palmares</item>
+        <item>Zaragoza</item>
+        <item>Buenos Aires</item>
+        <item>Santiago</item>
+        <item>Candelaria</item>
+        <item>Esquipulas</item>
+        <item>La Granja</item>
+    </string-array>
+
+    <string-array name="distritos_Poás">
+        <item>San Pedro</item>
+        <item>San Juan</item>
+        <item>San Rafael</item>
+        <item>Carrillos</item>
+        <item>Sabana Redonda</item>
+    </string-array>
+
+    <string-array name="distritos_Orotina">
+        <item>Orotina</item>
+        <item>El Mastate</item>
+        <item>Hacienda Vieja</item>
+        <item>Coyolar</item>
+        <item>La Ceiba</item>
+    </string-array>
+
+    <string-array name="distritos_San_Carlos">
+        <item>Quesada</item>
+        <item>Florencia</item>
+        <item>Buenavista</item>
+        <item>Aguas Zarcas</item>
+        <item>Venecia</item>
+        <item>Pital</item>
+        <item>La Fortuna</item>
+        <item>La Tigra</item>
+        <item>La Palmera</item>
+        <item>Venado</item>
+        <item>Cutris</item>
+        <item>Monterrey</item>
+        <item>Pocosol</item>
+    </string-array>
+
+    <string-array name="distritos_Zarcero">
+        <item>Zarcero</item>
+        <item>Laguna</item>
+        <item>Tapesco</item>
+        <item>Guadalupe</item>
+        <item>Palmira</item>
+        <item>Zapote</item>
+        <item>Brisas</item>
+    </string-array>
+
+    <string-array name="distritos_Sarchí">
+        <item>Sarchí Norte</item>
+        <item>Sarchí Sur</item>
+        <item>Toro Amarillo</item>
+        <item>San Pedro</item>
+        <item>Rodríguez</item>
+    </string-array>
+
+    <string-array name="distritos_Upala">
+        <item>Upala</item>
+        <item>Aguas Claras</item>
+        <item>San José O Pizote</item>
+        <item>Bijagua</item>
+        <item>Delicias</item>
+        <item>Dos Ríos</item>
+        <item>Yolillal</item>
+        <item>Canalete</item>
+    </string-array>
+
+    <string-array name="distritos_Los_Chiles">
+        <item>Los Chiles</item>
+        <item>Caño Negro</item>
+        <item>El Amparo</item>
+        <item>San Jorge</item>
+    </string-array>
+
+    <string-array name="distritos_Guatuso">
+        <item>San Rafael</item>
+        <item>Buenavista</item>
+        <item>Cote</item>
+        <item>Katira</item>
+    </string-array>
+
+    <string-array name="distritos_Río_Cuarto">
+        <item>Río Cuarto</item>
+        <item>Santa Rita</item>
+        <item>Santa Isabel</item>
+    </string-array>
+
+    <!--Distritos de Catago -->
+    <string-array name="distritos_">
+        <item></item>
+    </string-array>
+
+    <!--Distritos de Heredia -->
+    <string-array name="distritos_">
+        <item></item>
+    </string-array>
+
+    <!--Distritos de Guanacaste -->
+    <string-array name="distritos_">
+        <item></item>
+    </string-array>
+
+    <!--Distritos de Puntarenas -->
+    <string-array name="distritos_">
+        <item></item>
+    </string-array>
+
+    <!--Distritos de Guanacaste -->
+    <string-array name="distritos_">
+        <item></item>
+    </string-array>
+
 </resources>

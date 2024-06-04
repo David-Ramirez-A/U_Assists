@@ -92,6 +92,35 @@ class UsarioControler
         }
         return null
     }
+
+    fun listarPorCarrera(tipoUsuario: String, carrera: String): List<Usuario>?
+    {
+        val listaDisponibles = mutableListOf<Usuario>()
+        if(tipoUsuario == "1")
+        {
+            val listaTutores = listaTutores()
+            for(tutor in listaTutores!!)
+            {
+                if (tutor.carrera == carrera)
+                {
+                    listaDisponibles.add(tutor)
+                }
+            }
+        }
+        if(tipoUsuario == "2")
+        {
+            val listaEstudiantes = listaEstudiantes()
+            for (estudiante in listaEstudiantes!!)
+            {
+                if (estudiante.carrera == carrera)
+                {
+                    listaDisponibles.add(estudiante)
+                }
+            }
+        }
+        return listaDisponibles
+    }
+
     fun listaEstudiantes(): List<Usuario>?
     {
         return getUsuariosTipo(1)

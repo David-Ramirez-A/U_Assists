@@ -3,6 +3,7 @@ package com.example.uassists
 import Controler.UsarioControler
 import android.content.Intent
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -16,7 +17,9 @@ class tutorList : AppCompatActivity() {
     lateinit var btnBuscar: ImageButton
     lateinit var btnPerfil: ImageButton
     lateinit var btnLogOut: ImageButton
+    lateinit var btnBuscarBarra: ImageButton
     lateinit var lblTitulo: TextView
+    lateinit var txtCarreraBuscar: EditText
 
     //Esta parte se declara la plantilla para la lista de usuarios
     lateinit var recyclerView: RecyclerView
@@ -37,7 +40,9 @@ class tutorList : AppCompatActivity() {
         btnBuscar = findViewById(R.id.btnBuscar)
         btnPerfil = findViewById(R.id.btnPerfil)
         btnLogOut = findViewById(R.id.btnLogOut)
+        btnBuscarBarra = findViewById(R.id.btnBuscarBarra)
         lblTitulo = findViewById(R.id.lblTitulo)
+        txtCarreraBuscar = findViewById(R.id.txtCarreraBuscar)
 
         //Conexion que el activity de la plantilla
         recyclerView = findViewById(R.id.llUsuario)
@@ -88,6 +93,41 @@ class tutorList : AppCompatActivity() {
             val intent = Intent(this, inicio::class.java)
             startActivity(intent)
             finish()
+        }
+
+        btnBuscarBarra.setOnClickListener {
+            val carrera = txtCarreraBuscar.text.toString()
+            if (carrera.isNotEmpty()) {
+                if (tipoUsuario == "1")//Estudiante
+                {
+                    lblTitulo.text = "Tutores disponibles"
+                    val listaTutores = usuarioControler.listarPorCarrera(tipoUsuario, carrera)
+                    recyclerView.adapter =
+                        AdapterClass(listaTutores, usuario, tipoUsuario, this, this)
+                }
+                if (tipoUsuario == "2")//Tutor
+                {
+                    lblTitulo.text = "Estudiantes disponibles"
+                    val listaEstudiantes = usuarioControler.listarPorCarrera(tipoUsuario, carrera)
+                    recyclerView.adapter =
+                        AdapterClass(listaEstudiantes, usuario, tipoUsuario, this, this)
+                }
+            }
+            else
+            {
+                if(tipoUsuario=="1")//Estudiante
+                {
+                    lblTitulo.text = "Tutores disponibles"
+                    val listaTutores =  usuarioControler.listaTutores()
+                    recyclerView.adapter = AdapterClass(listaTutores, usuario, tipoUsuario,this,this)
+                }
+                if(tipoUsuario=="2")//Tutor
+                {
+                    lblTitulo.text = "Estudiantes disponibles"
+                    val listaEstudiantes = usuarioControler.listaEstudiantes()
+                    recyclerView.adapter = AdapterClass(listaEstudiantes, usuario, tipoUsuario,this,this)
+                }
+            }
         }
         //Se carla la lista ya sea de tutores o estudiantes
         cargarLista()

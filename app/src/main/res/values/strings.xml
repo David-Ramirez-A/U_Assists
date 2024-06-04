@@ -157,4 +157,6 @@ Dirección: Heredia, Belen, San Antonio</string>
     <string name="calificacion_asisgnada">Calificacion asisgnada</string>
     <string name="usuario_que_hacer_el_review">Usuario que hacer el review</string>
     <string name="rese_as">Reseñas</string>
+    <string name="buscar_carrera">Buscar Carrera</string>
+    <string name="boton_de_buscar_barra_de_lista">boton de buscar barra de lista</string>
 </resources>

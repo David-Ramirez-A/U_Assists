@@ -33,12 +33,12 @@
                 android:layout_height="50dp"
                 android:layout_weight="0"
                 android:backgroundTint="#00FFFFFF"
-                android:contentDescription="@string/boton_de_buscar"
+                android:contentDescription="@string/boton_de_buscar_barra_de_lista"
                 android:scaleType="fitCenter"
                 android:src="@drawable/magnifying_glass" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/txtCarreraBuscar"
                 android:layout_width="311dp"
                 android:layout_height="49dp"
                 android:layout_weight="0"
@@ -46,7 +46,7 @@
                 android:background="#00FFFFFF"
                 android:ems="10"
                 android:fontFamily="@font/quicksand_medium"
-                android:hint="@string/buscar"
+                android:hint="@string/buscar_carrera"
                 android:inputType="text"
                 android:textSize="24sp"
                 tools:ignore="TextContrastCheck" />

@@ -31,6 +31,9 @@ class FinishProfile : AppCompatActivity() {
     //Declaracion del controler donde se comunica con la base de datos y con el modelo
     private lateinit var usuarioControler: UsarioControler
 
+    private lateinit var adapter_cantones: ArrayAdapter<String>
+    private lateinit var adapter_distritos: ArrayAdapter<String>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //Lo siguiente permite que la app se extienda por completo en la pantalla
@@ -66,8 +69,8 @@ class FinishProfile : AppCompatActivity() {
         val carreras = resources.getStringArray(R.array.carreras)
         val generos = resources.getStringArray(R.array.generos)
         val provincias = resources.getStringArray(R.array.provincias)
-        val cantones = resources.getStringArray(R.array.cantones_San_Jose)
-        val distritos = resources.getStringArray(R.array.distritos_San_Jose)
+        val cantones = resources.getStringArray(R.array.cantones_San_Jose).toMutableList()
+        val distritos = resources.getStringArray(R.array.distritos_San_Jose).toMutableList()
 
         val adapter_carreras = ArrayAdapter(this,android.R.layout.simple_spinner_item,carreras)
         adapter_carreras.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -75,9 +78,9 @@ class FinishProfile : AppCompatActivity() {
         adapter_generos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         val adapter_provincias = ArrayAdapter(this,android.R.layout.simple_spinner_item,provincias)
         adapter_provincias.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        val adapter_cantones = ArrayAdapter(this,android.R.layout.simple_spinner_item,cantones)
+        adapter_cantones = ArrayAdapter(this,android.R.layout.simple_spinner_item,cantones)
         adapter_cantones.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        val adapter_distritos = ArrayAdapter(this,android.R.layout.simple_spinner_item,distritos)
+        adapter_distritos = ArrayAdapter(this,android.R.layout.simple_spinner_item,distritos)
         adapter_distritos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         spinnerCarreras.adapter = adapter_carreras
@@ -133,27 +136,27 @@ class FinishProfile : AppCompatActivity() {
                 if (selectedItem == "Cartago")
                 {
                     actualizarCantones(R.array.cantones_Cartago)
-                    //actualizarDistritos(R.array.)
+                    actualizarDistritos(R.array.distritos_Cartago)
                 }
                 if (selectedItem == "Heredia")
                 {
                     actualizarCantones(R.array.cantones_Heredia)
-                    //actualizarDistritos(R.array.)
+                    actualizarDistritos(R.array.distritos_Heredia)
                 }
                 if (selectedItem == "Guanacaste")
                 {
                     actualizarCantones(R.array.cantones_Guanacaste)
-                    //actualizarDistritos(R.array.)
+                    actualizarDistritos(R.array.distritos_Liberia)
                 }
                 if (selectedItem == "Puntarenas")
                 {
                     actualizarCantones(R.array.cantones_Puntarenas)
-                    //actualizarDistritos(R.array.)
+                    actualizarDistritos(R.array.distritos_Puntarenas)
                 }
                 if (selectedItem == "Limón")
                 {
                     actualizarCantones(R.array.cantones_Limón)
-                    //actualizarDistritos(R.array.)
+                    actualizarDistritos(R.array.distritos_Limón)
                 }
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -322,202 +325,202 @@ class FinishProfile : AppCompatActivity() {
                 {
                     if (selectedItem == "Cartago")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Cartago)
                     }
                     if (selectedItem == "Paraíso")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Paraíso)
                     }
                     if (selectedItem == "La Unión")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_La_Unión)
                     }
                     if (selectedItem == "Jiménez")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Jiménez)
                     }
                     if (selectedItem == "Turrialba")
                     {
-                        //actualizarDistritos(R.array)
-                    }
-                    if (selectedItem == "")
-                    {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Turrialba)
                     }
                     if (selectedItem == "Alvarado")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Alvarado)
                     }
                     if (selectedItem == "Oreamuno")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Oreamuno)
                     }
                     if (selectedItem == "El Guarco")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_El_Guarco)
                     }                }
                 if (provincia == "Heredia")
                 {
                     if (selectedItem == "Heredia")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Heredia)
                     }
                     if (selectedItem == "Barva")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Barva)
                     }
                     if (selectedItem == "Santo Domingo")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Santo_Domingo)
                     }
                     if (selectedItem == "Santa Bárbara")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Santa_Bárbara)
                     }
                     if (selectedItem == "San Rafael")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_San_Rafael)
                     }
                     if (selectedItem == "San Isidro")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_San_Isidro)
                     }
                     if (selectedItem == "Belén")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Belén)
                     }
                     if (selectedItem == "Flores")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Flores)
                     }
                     if (selectedItem == "San Pablo")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_San_Pablo)
                     }
                     if (selectedItem == "Sarapiquí")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Sarapiquí)
                     }
                 }
                 if (provincia == "Guanacaste")
                 {
                     if (selectedItem == "Liberia")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Liberia)
                     }
                     if (selectedItem == "Nicoya")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Nicoya)
                     }
                     if (selectedItem == "Santa Cruz")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Santa_Cruz)
                     }
                     if (selectedItem == "Bagaces")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Bagaces)
                     }
                     if (selectedItem == "Carrillo")
-                    {
-                        //actualizarDistritos(R.array)
+                        {
+                        actualizarDistritos(R.array.distritos_Carrillo)
+                    }
+                    if (selectedItem == "Cañas")
+                        {
+                        actualizarDistritos(R.array.distritos_Cañas)
                     }
                     if (selectedItem == "Abangares")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Abangares)
                     }
                     if (selectedItem == "Tilarán")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Tilarán)
                     }
                     if (selectedItem == "Nandayure")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Nandayure)
                     }
                     if (selectedItem == "La Cruz")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_La_Cruz)
                     }
                     if (selectedItem == "Hojancha")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Hojancha)
                     }
                 }
                 if (provincia == "Puntarenas")
                 {
                     if (selectedItem == "Puntarenas")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Puntarenas)
                     }
                     if (selectedItem == "Esparza")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Esparza)
                     }
                     if (selectedItem == "Buenos Aires")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Buenos_Aires)
                     }
                     if (selectedItem == "Montes de Oro")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Montes_de_Oro)
                     }
                     if (selectedItem == "Osa")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Osa)
                     }
                     if (selectedItem == "Quepos")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Quepos)
                     }
                     if (selectedItem == "Golfito")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Golfito)
                     }
                     if (selectedItem == "Coto Brus")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Coto_Brus)
                     }
                     if (selectedItem == "Parrita")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Parrita)
                     }
                     if (selectedItem == "Corredores")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Corredores)
                     }
                     if (selectedItem == "Garabito")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Garabito)
                     }
                     if (selectedItem == "Monteverde")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Monteverde)
                     }
                 }
                 if (provincia == "Limón")
                 {
                     if (selectedItem == "Limón")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Limón)
                     }
                     if (selectedItem == "Pococí")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Pococí)
                     }
                     if (selectedItem == "Siquirres")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Siquirres)
                     }
                     if (selectedItem == "Talamanca")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Talamanca)
                     }
                     if (selectedItem == "Matina")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Matina)
                     }
                     if (selectedItem == "Guácimo")
                     {
-                        //actualizarDistritos(R.array)
+                        actualizarDistritos(R.array.distritos_Guácimo)
                     }
                 }
             }
@@ -570,17 +573,18 @@ class FinishProfile : AppCompatActivity() {
 
     private fun actualizarCantones(ruta: Int)
     {
-        val cantones = resources.getStringArray(ruta)
-        val adapter_cantones = ArrayAdapter(this,android.R.layout.simple_spinner_item,cantones)
-        adapter_cantones.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerCantones.adapter = adapter_cantones
+        val cantones = resources.getStringArray(ruta).toMutableList()
+        spinnerCantones.setSelection(0)
+        adapter_cantones.clear()
+        adapter_cantones.addAll(cantones)
+        adapter_cantones.notifyDataSetChanged()
     }
 
     private fun actualizarDistritos(ruta: Int)
     {
-        val distritos = resources.getStringArray(ruta)
-        val adapter_distritos = ArrayAdapter(this,android.R.layout.simple_spinner_item,distritos)
-        adapter_distritos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerDistritos.adapter = adapter_distritos
+        val distritos = resources.getStringArray(ruta).toMutableList()
+        adapter_distritos.clear()
+        adapter_distritos.addAll(distritos)
+        adapter_distritos.notifyDataSetChanged()
     }
 }

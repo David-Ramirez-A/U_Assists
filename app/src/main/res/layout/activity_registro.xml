@@ -50,7 +50,7 @@
         tools:ignore="RtlHardcoded,VisualLintBounds" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="360dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -87,7 +87,7 @@
 
     <EditText
         android:id="@+id/txtEmailRegistro"
-        android:layout_width="360sp"
+        android:layout_width="357dp"
         android:layout_height="50sp"
         android:layout_margin="5sp"
         android:autofillHints=""
@@ -102,7 +102,7 @@
 
     <EditText
         android:id="@+id/txtContrasenaRegistro"
-        android:layout_width="360sp"
+        android:layout_width="353dp"
         android:layout_height="50sp"
         android:layout_margin="5sp"
         android:autofillHints=""
@@ -117,7 +117,7 @@
 
     <EditText
         android:id="@+id/txtConfirmarContrasena"
-        android:layout_width="360sp"
+        android:layout_width="351dp"
         android:layout_height="50sp"
         android:layout_margin="5sp"
         android:autofillHints=""

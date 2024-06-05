@@ -59,6 +59,29 @@ class registro : AppCompatActivity()
         //Inicialización del objeto del controler
         usuarioControler = UsarioControler()
 
+        fun validarCorreo(email: String): Boolean
+        {
+            val emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$".toRegex()
+            return email.matches(emailRegex)
+        }
+
+        fun validarPassword(password: String): Boolean
+        {
+            // Definimos los criterios mínimos de seguridad para la contraseña
+            val tamanoMinimo = 8
+            val mayuscula = "[A-Z]".toRegex()
+            val minuscula = "[a-z]".toRegex()
+            val digito = "[0-9]".toRegex()
+            val caracterEspecial = "[^A-Za-z0-9]".toRegex()
+
+            // Verificamos que la contraseña cumpla con todos los criterios
+            return password.length >= tamanoMinimo &&
+                    mayuscula.containsMatchIn(password) &&
+                    minuscula.containsMatchIn(password) &&
+                    digito.containsMatchIn(password) &&
+                    caracterEspecial.containsMatchIn(password)
+        }
+
         //Metodos de funcionamiento de los botones
         btnRegistrarUsuario.setOnClickListener {
             val nombre = txtNombre.text.toString()
@@ -84,55 +107,70 @@ class registro : AppCompatActivity()
                     {
                         if(emailRegistro.isNotEmpty())
                         {
-                            if(contrasenaRegistro.isNotEmpty())
+                            if(validarCorreo(emailRegistro))
                             {
-                                if(confirmarContrasenaRegistro.isNotEmpty())
+                                if (contrasenaRegistro.isNotEmpty())
                                 {
-                                    if(tipoUsuario.isNotEmpty())
+                                    if(validarPassword(contrasenaRegistro))
                                     {
-                                        if(contrasenaRegistro == confirmarContrasenaRegistro)
+                                        if (confirmarContrasenaRegistro.isNotEmpty())
                                         {
-                                            usuarioControler.existeUsuario(emailRegistro){ exists ->
-                                                if (exists)
+                                            if (tipoUsuario.isNotEmpty())
+                                            {
+                                                if (contrasenaRegistro == confirmarContrasenaRegistro)
                                                 {
-                                                    Toast.makeText(this, "Ya hay una cuenta con ese Email", Toast.LENGTH_SHORT).show()
-                                                    txtEmailRegistro.error = "Ya hay una cuenta con ese Email"
+                                                    usuarioControler.existeUsuario(emailRegistro) { exists ->
+                                                        if (exists) {
+                                                            Toast.makeText(this, "Ya hay una cuenta con ese Email", Toast.LENGTH_SHORT).show()
+                                                            txtEmailRegistro.error = "Ya hay una cuenta con ese Email"
+                                                        }
+                                                        else
+                                                        {
+                                                            val intent = Intent(this, FinishProfile::class.java)
+                                                            intent.putExtra("nombre", nombre)
+                                                            intent.putExtra("apellido", apellido)
+                                                            intent.putExtra("email", emailRegistro)
+                                                            intent.putExtra("contraseña", contrasenaRegistro)
+                                                            intent.putExtra("tipoUsuario", tipoUsuario)
+                                                            startActivity(intent)
+                                                            finish()
+                                                        }
+                                                    }
                                                 }
                                                 else
                                                 {
-                                                    val intent = Intent(this, FinishProfile::class.java)
-                                                    intent.putExtra("nombre",nombre)
-                                                    intent.putExtra("apellido",apellido)
-                                                    intent.putExtra("email",emailRegistro)
-                                                    intent.putExtra("contraseña",contrasenaRegistro)
-                                                    intent.putExtra("tipoUsuario",tipoUsuario)
-                                                    startActivity(intent)
-                                                    finish()
+                                                    Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT)
+                                                    txtContrasenaRegistro.error = "La contraseña no coincide"
+                                                    txtConfirmarContrasenaRegistro.error = "La contraseña no coincide"
                                                 }
+                                            }
+                                            else
+                                            {
+                                                Toast.makeText(this, "Debe seleccionar un tipo de usuario", Toast.LENGTH_SHORT).show()
                                             }
                                         }
                                         else
                                         {
-                                            Toast.makeText(this,"Las contraseñas no coinciden",Toast.LENGTH_SHORT)
-                                            txtContrasenaRegistro.error = "La contraseña no coincide"
-                                            txtConfirmarContrasenaRegistro.error = "La contraseña no coincide"
+                                            Toast.makeText(this, "Debe llenar el campo de confirmar contraseña", Toast.LENGTH_SHORT).show()
+                                            txtConfirmarContrasenaRegistro.error = "Debe de confirmar su contraseña"
                                         }
                                     }
                                     else
                                     {
-                                        Toast.makeText(this, "Debe seleccionar un tipo de usuario", Toast.LENGTH_SHORT).show()
+                                        Toast.makeText(this, "Contraseña invalida", Toast.LENGTH_SHORT).show()
+                                        txtContrasenaRegistro.error = "La contraseña no es segura"
                                     }
                                 }
                                 else
                                 {
-                                    Toast.makeText(this, "Debe llenar el campo de confirmar contraseña", Toast.LENGTH_SHORT).show()
-                                    txtConfirmarContrasenaRegistro.error = "Debe de confirmar su contraseña"
+                                    Toast.makeText(this, "Debe llenar el campo de contraseña", Toast.LENGTH_SHORT).show()
+                                    txtContrasenaRegistro.error = "Debe digitar su contraseña"
                                 }
                             }
                             else
                             {
-                                Toast.makeText(this, "Debe llenar el campo de contraseña", Toast.LENGTH_SHORT).show()
-                                txtContrasenaRegistro.error = "Debe digitar su contraseña"
+                                Toast.makeText(this, "Email invalido", Toast.LENGTH_SHORT).show()
+                                txtEmailRegistro.error = "Email invalido"
                             }
                         }
                         else

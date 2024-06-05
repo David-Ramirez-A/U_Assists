@@ -112,7 +112,7 @@ class ResenaControler
             }
     }
 
-    fun existeResena(evaluador: String): Boolean
+    fun existeResena(evaluador: String, evaluado: String): Boolean
     {
         val solicitud = coleccionResenas.get()
         val solicitudResultante = runBlocking { solicitud.await() }
@@ -123,7 +123,7 @@ class ResenaControler
                 val nuevaResena = document.toObject<Resena>()
                 if (nuevaResena != null)
                 {
-                    if(nuevaResena?.evaluador == evaluador)
+                    if(nuevaResena?.evaluador == evaluador && nuevaResena?.evaluado == evaluado)
                     {
                         return true
                     }

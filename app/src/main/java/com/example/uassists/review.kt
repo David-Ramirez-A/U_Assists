@@ -69,7 +69,7 @@ class review : AppCompatActivity()
             if (resenaText.isNotEmpty())
             {
                 val calificacion = spinnerNumeros.selectedItem.toString()
-                if (resenaControler.existeResena(nombre))
+                if (resenaControler.existeResena(nombre,perfilSeleccionado))
                 {
                     resenaControler.actualizarResena(perfilSeleccionado,nombre,calificacion,resenaText)
                 }
